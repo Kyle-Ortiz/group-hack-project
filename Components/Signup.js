@@ -9,6 +9,7 @@ const firstState = {
 }
 
 function Signup() {
+     //add error toggling if any field is left blank?
      const [signUpForm, setSignUpForm] = useState(firstState)
      const inputChange = (e) => {
           setSignUpForm({...signUpForm, 
@@ -23,9 +24,9 @@ function Signup() {
                <div >
                     <h1 id="signup-header">Let's create your account.</h1>
                </div>
-              <TextField className="text-field" id="outlined-basic" name="first" value={signUpForm.first} onChange={(e)=> inputChange(e)} label="First Name" variant="outlined" />
-              <TextField className="text-field" id="outlined-basic" name="last"value={signUpForm.last} onChange={(e)=>inputChange(e)} label="Last Name" variant="outlined" />
-              <TextField className="text-field" id="outlined-basic" type="password" name="Password"value={signUpForm.Password} onChange={(e) => inputChange(e)} label="Password" variant="outlined" />
+              <TextField required className="text-field" id="outlined-basic" name="first" value={signUpForm.first} onChange={(e)=> inputChange(e)} label="First Name" variant="outlined" />
+              <TextField required className="text-field" id="outlined-basic" name="last"value={signUpForm.last} onChange={(e)=>inputChange(e)} label="Last Name" variant="outlined" />
+              <TextField required className="text-field" id="outlined-basic" type="password" name="Password"value={signUpForm.Password} onChange={(e) => inputChange(e)} label="Password" variant="outlined" />
               <Button id="signup-button" color="success" onClick={submit}variant="contained">Sign up</Button>
   </div>;
 }
