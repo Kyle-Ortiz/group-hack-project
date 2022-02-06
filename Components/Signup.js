@@ -28,7 +28,8 @@ function Signup() {
               <TextField required className="text-field" id="outlined-basic" name="last"value={signUpForm.last} onChange={(e)=>inputChange(e)} label="Last Name" variant="outlined" />
               <TextField required className="text-field" id="outlined-basic" type="password" name="Password"value={signUpForm.Password} onChange={(e) => inputChange(e)} label="Password" variant="outlined" />
               <Button id="signup-button" color="success" onClick={submit}variant="contained">Sign up</Button>
-  </div>;
+              <p>Already have an account? <a href="/signin">Sign in. </a></p>
+          </div>;
 }
 
 export default Signup;
