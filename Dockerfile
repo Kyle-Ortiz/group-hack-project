@@ -1,9 +1,15 @@
-FROM node:12-alpine
-RUN apk add --no-cache python2 g++ make
+FROM node:16-alpine AS deps
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
-# For caching porpuses, copy all of the dependencies first
-COPY package.json yarn.lock ./
-# For caching porpuses, copy all of the dependencies first
-RUN yarn install --production
+COPY package.json package-lock.json ./
+RUN npm ci
+
+
+FROM node:16-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-CMD ["node", "src/index.js"]
+RUN npm run build
+
+
+CMD ["npm", "start"]
