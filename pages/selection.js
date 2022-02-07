@@ -4,7 +4,7 @@ import Categories from '../components/categories'
 import CompanyLogo from '../components/company/CompanyLogo'
 import Employee from '../components/employee/employee'
 import Items from '../components/items/Items'
-
+import styles from '../styles/Selection.module.css'
 
 const itemsList = [
     {name: "Orange juice", category: "Beverages"}, 
@@ -25,32 +25,42 @@ const categoriesList = [
 function Selection() {
 
   return (
-      <div className='selectionContainer'>
+      <div className={styles.container}>
+          <div className={styles.main}>
+                <div className={styles.selectionContainer}>
 
-            <div className='companyContainer'>
-                <CompanyLogo />
-            </div>
+                        <div className={styles.companyContainer}>
+                            <h4>Company</h4>
+                            <CompanyLogo />
+                        </div>
 
-            <div className='employeeContainer'>
-                <Employee employeeInfo={employeeInfo}/>
-            </div>
+                        <div className={styles.employeeContainer}>
+                            <h4>Employee</h4>
+                            <Employee employeeInfo={employeeInfo}/>
+                        </div>
 
-            <div className='itemSearch'>
-                <input type="text" ></input>
-            </div>
+                        <div className={styles.itemSearch}>
+                            <h4>Search Item</h4>
+                            <input type="text" ></input>
+                        </div>
 
-            <div className='categoriesContainer'>
-                <Categories categories={categoriesList} />
-            </div>
+                        <div className={styles.categoriesContainer}>
+                            <h4>Categories</h4>
+                            <Categories categories={categoriesList} />
+                        </div>
 
-            <div className='cartContainer'>
-                <Cart />
-            </div>
+                        <div className={styles.cartContainer}>
+                            <h4>Cart</h4>
+                            <Cart />
+                        </div>
 
-            <div className='itemsContainer'>
-                <Items items={itemsList}/>
+                        <div className={styles.itemsContainer}>
+                            <h4>Items</h4>
+                            <Items items={itemsList}/>
+                        </div>
+                        
+                </div>
             </div>
-            
       </div>
   )
 

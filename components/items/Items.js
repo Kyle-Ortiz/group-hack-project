@@ -7,8 +7,8 @@ function Items({items}) {
 
     return (
         <div className='itemsScreen'>
-            {items.map(item => {
-                <ItemOnScreen item={item} />
+            {items.map((item, index) => {
+                return <ItemOnScreen item={item} key={index}/>
             })}
         </div>
     )

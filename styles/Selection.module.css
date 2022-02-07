@@ -1,0 +1,52 @@
+.container {
+    padding: 0 2rem;
+  }
+  
+  /* .main {
+    min-height: 100vh;
+    padding: 4rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+
+.selectionContainer {
+    display: grid;
+    grid-template-areas: "company employee"
+                         "searchItem cart"
+                         "categories cart"
+                         "items cart";
+    grid-template-columns: 70%;
+}
+
+.companyContainer{
+    grid-area: company;
+    border: solid 1px black
+}
+
+.employeeContainer{
+    grid-area: employee;
+    border: solid 1px black
+}
+
+.itemSearch{
+    grid-area: searchItem;
+    border: solid 1px black
+}
+
+.categoriesContainer{
+    grid-area: categories;
+    border: solid 1px black
+}
+
+.cartContainer{
+    grid-area: cart;
+    border: solid 1px black
+}
+
+.itemsContainer{
+    grid-area: items;
+    border: solid 1px black
+}
