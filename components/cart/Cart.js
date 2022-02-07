@@ -12,6 +12,8 @@ function Cart({items}) {
             {items.map((item, index) => {
                 return <ItemInCart item={item} key={index} />
             })}
+            <br/><br/>
+            <button>Proceed to Checkout</button>
         </div>
     )
 
