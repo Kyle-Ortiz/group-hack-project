@@ -22,7 +22,7 @@ function Signup() {
           //send form to backend for account creation
           setSignUpForm(firstState)
      }
-  return <form id="signup-form">
+  return <form className="form">
                <div >
                     <h1 id="signup-header">Let{"'"}s create your account.</h1>
                </div>

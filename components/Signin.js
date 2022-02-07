@@ -21,7 +21,7 @@ function Signin() {
           //send form to backend for account creation
           setSignInForm(firstState)
      }
-  return <form id="signup-form">
+  return <form className="form">
                <div >
                     <h1 id="signup-header">Sign In</h1>
                </div>
