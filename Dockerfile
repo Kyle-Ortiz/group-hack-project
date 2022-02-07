@@ -1,3 +1,5 @@
+# Tthis is a production dockerization for app (frontend)
+
 FROM node:16-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app

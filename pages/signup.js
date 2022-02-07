@@ -1,4 +1,4 @@
-import Signup from '../Components/Signup';
+import Signup from '../components/Signup';
 import React from 'react';
 
 function signup() {
