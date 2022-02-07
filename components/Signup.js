@@ -24,7 +24,7 @@ function Signup() {
      }
   return <form className="form">
                <div >
-                    <h1 id="signup-header">Let{"'"}s create your account.</h1>
+                    <h1 className="form-header">Let{"'"}s create your account.</h1>
                </div>
               <TextField required className="text-field" id="outlined-basic" name="first" value={signUpForm.first} onChange={(e)=> inputChange(e)} label="First Name" variant="outlined" />
               <TextField required className="text-field" id="outlined-basic2" name="last"value={signUpForm.last} onChange={(e)=>inputChange(e)} label="Last Name" variant="outlined" />

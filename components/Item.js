@@ -25,7 +25,7 @@ function Item() {
      }
   return <form className="form">
                <div >
-                    <h1 id="signup-header">Add Item</h1>
+                    <h1 className="form-header">Add Item</h1>
                </div>
               <TextField required className="text-field" id="outlined-basic4" name="itemName" value={itemForm.itemName} onChange={(e)=> inputChange(e)} label="Item Name" variant="outlined" />
               <TextField required className="text-field" id="outlined-basic5" name="description"value={itemForm.description} onChange={(e) => inputChange(e)} label="Description" variant="outlined" />
