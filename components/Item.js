@@ -21,6 +21,7 @@ function Item() {
      }
      const submit = (e) => {
           //send form to backend for account creation
+          //add this item to the state 
           setItemForm(firstState)
      }
   return <form className="form">
