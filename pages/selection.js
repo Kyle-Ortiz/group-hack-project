@@ -51,7 +51,7 @@ function Selection() {
 
                         <div className={styles.cartContainer}>
                             <h4>Cart</h4>
-                            <Cart />
+                            <Cart items={itemsList} />
                         </div>
 
                         <div className={styles.itemsContainer}>
