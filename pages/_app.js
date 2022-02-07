@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import signup from '../styles/signup.css' 
+import signup from '../styles/form.css' 
 
 
 function MyApp({ Component, pageProps }) {

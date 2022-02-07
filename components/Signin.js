@@ -21,9 +21,9 @@ function Signin() {
           //send form to backend for account creation
           setSignInForm(firstState)
      }
-  return <form id="signup-form">
+  return <form className="form">
                <div >
-                    <h1 id="signup-header">Sign In</h1>
+                    <h1 className="form-header">Sign In</h1>
                </div>
               <TextField required className="text-field" id="outlined-basic" name="employeeId" value={signInForm.first} onChange={(e)=> inputChange(e)} label="Employee ID" variant="outlined" />
               <TextField required className="text-field" id="outlined-basic2" type="password" name="password"value={signInForm.Password} onChange={(e) => inputChange(e)} label="Password" variant="outlined" />
