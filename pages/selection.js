@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Cart from '../components/cart/Cart'
+import { CartContext } from '../components/cart/CartContext'
 import Categories from '../components/categories'
 import CompanyLogo from '../components/company/CompanyLogo'
 import Employee from '../components/employee/employee'
@@ -23,6 +24,8 @@ const categoriesList = [
 ]
 
 function Selection() {
+
+  const { basket } = useContext(CartContext);
 
   return (
       <div className={styles.container}>
@@ -51,7 +54,7 @@ function Selection() {
 
                         <div className={styles.cartContainer}>
                             <h4>Cart</h4>
-                            <Cart items={itemsList} />
+                            <Cart items={basket} />
                         </div>
 
                         <div className={styles.itemsContainer}>

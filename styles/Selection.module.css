@@ -48,5 +48,13 @@
 
 .itemsContainer{
     grid-area: items;
-    border: solid 1px black
+    border: solid 1px black;
+}
+
+.itemsOnScreen {
+    display: grid;
+    grid-template-columns: 1 1;
+    grid-template-rows: 1 1;
+    justify-items: center;
+    /* grid-template-rows: max-content; */
 }
