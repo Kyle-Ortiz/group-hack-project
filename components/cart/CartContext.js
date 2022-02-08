@@ -1,6 +1,7 @@
 import React, {useState, createContext } from 'react'
 
 export const CartContext =  createContext();
+
 const itemsList = new Map();
 
 export const CartProvider = ( {children }) => {
@@ -18,6 +19,7 @@ export const CartProvider = ( {children }) => {
             updatedItem.quantity++
             itemsList.set(name, updatedItem)
         }
+        // convert the values of the itemsList map into an array
         setBasket([...itemsList.values()])
     }
 
@@ -40,15 +42,13 @@ export const CartProvider = ( {children }) => {
         setBasket([...itemsList.values()])
     }
 
-
     return (
         <CartContext.Provider 
             value= {{
                 addCartItem,
                 subtractCartItem,
                 eliminateCartItem,
-                basket,
-                setBasket
+                basket
             }} 
         >
             {children}

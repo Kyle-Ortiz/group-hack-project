@@ -7,7 +7,7 @@ function ItemInCart({item}) {
 
     return (
         <div className='itemInCart'>
-            <p>{item.name} {item.quantity}</p>
+            <p>{item.name} x {item.quantity}</p>
             <button onClick={() => eliminateCartItem(item)}>
                 X
             </button>  
