@@ -5,8 +5,6 @@ function Cart({items}) {
 
     if(!items.length) return <p>You cart is empty</p>
 
-    // const set = new Set(items);
-
     return (
         <div className='cart'>
             {items.map((item, index) => {
