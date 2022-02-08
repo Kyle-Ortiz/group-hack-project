@@ -1,11 +1,22 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { CartContext } from '../cart/CartContext';
 
 function ItemInCart({item}) {
 
+    const {addCartItem, subtractCartItem, eliminateCartItem } = useContext(CartContext);
+
     return (
         <div className='itemInCart'>
-            <p>{item.name}</p>
-            <button>X</button>  <button>-</button>  <button>+</button>
+            <p>{item.name} {item.quantity}</p>
+            <button onClick={() => eliminateCartItem(item)}>
+                X
+            </button>  
+            <button onClick={() => subtractCartItem(item)}> 
+                -
+            </button>  
+            <button onClick={() => addCartItem(item)}>
+                +
+            </button>
         </div>
     )
 
