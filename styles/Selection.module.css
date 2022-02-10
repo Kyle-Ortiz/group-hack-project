@@ -24,10 +24,11 @@
 
 .companyContainer{
     grid-area: company;
-    border: solid 2px black;
+    border: solid 2px #2e7d32;
     padding: 1.5rem;
     margin: 1rem 0 0 0;
     border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .companyContainer h4{
     font-size: 1.5rem;
@@ -35,29 +36,39 @@
 
 .employeeContainer{
     grid-area: employee;
-    border: solid 2px black;
+    border: solid 2px #2e7d32;
     border-radius: .5rem;
     margin: 1rem 0 0 0;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .itemSearch{
     grid-area: searchItem;
-    border: solid 1px black
+    border: solid 2px #2e7d32;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .categoriesContainer{
     grid-area: categories;
-    border: solid 1px black
+    border: solid 2px #2e7d32;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cartContainer{
     grid-area: cart;
-    border: solid 1px black
+    border: solid 2px #2e7d32;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .itemsContainer{
     grid-area: items;
-    border: solid 1px black;
+    border: solid 2px #2e7d32;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .itemsOnScreen {

@@ -38,7 +38,7 @@ function Selection() {
                         </div>
 
                         <div className={styles.employeeContainer}>
-                            <h4>Employee</h4>
+                            <h4>Current Employee:</h4>
                             <Employee employeeInfo={employeeInfo}/>
                         </div>
 

@@ -3,8 +3,9 @@ export default function Employee({employeeInfo}){
     
     return (
         <div className="employeeInfo">
-            <p>{employeeInfo.name}</p>
-            <p>{employeeInfo.employeeId}</p>
+
+            <p>Name: {employeeInfo.name}</p>
+            <p>Employee ID: {employeeInfo.employeeId}</p>
         </div>
     )
 }
