@@ -1,5 +1,7 @@
 .container {
-    padding: 0 2rem;
+     padding: 0 2rem;
+     background-color: azure;
+     height: 100vh;
   }
   
   /* .main {
@@ -23,6 +25,7 @@
 }
 
 .companyContainer{
+    background-color: #fff;
     grid-area: company;
     border: solid 2px #2e7d32;
     padding: 1.5rem;
@@ -35,6 +38,7 @@
 }
 
 .employeeContainer{
+    background-color: #fff;
     grid-area: employee;
     border: solid 2px #2e7d32;
     border-radius: .5rem;
@@ -44,6 +48,7 @@
 }
 
 .itemSearch{
+    background-color: #fff;
     grid-area: searchItem;
     border: solid 2px #2e7d32;
     border-radius: .5rem;
@@ -51,6 +56,7 @@
 }
 
 .categoriesContainer{
+    background-color: #fff;
     grid-area: categories;
     border: solid 2px #2e7d32;
     border-radius: .5rem;
@@ -58,6 +64,7 @@
 }
 
 .cartContainer{
+    background-color: #fff;
     grid-area: cart;
     border: solid 2px #2e7d32;
     border-radius: .5rem;
@@ -65,6 +72,7 @@
 }
 
 .itemsContainer{
+    background-color: #fff;
     grid-area: items;
     border: solid 2px #2e7d32;
     border-radius: .5rem;
