@@ -33,8 +33,8 @@ function Selection() {
                 <div className={styles.selectionContainer}>
 
                         <div className={styles.companyContainer}>
-                            <h4>Company</h4>
                             <CompanyLogo />
+                            <h4>Greens Food Suppliers</h4>
                         </div>
 
                         <div className={styles.employeeContainer}>
