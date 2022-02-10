@@ -13,7 +13,7 @@ function ItemInCart({item}) {
             </button>  
             <button onClick={() => subtractCartItem(item)}> 
                 -
-            </button>  
+            </button>
             <button onClick={() => addCartItem(item)}>
                 +
             </button>

@@ -1,9 +1,9 @@
 import React, {useContext} from 'react'
 import Cart from '../components/cart/Cart'
 import { CartContext } from '../components/cart/CartContext'
-import Categories from '../components/categories'
+import Categories from '../components/Categories'
 import CompanyLogo from '../components/company/CompanyLogo'
-import Employee from '../components/employee/employee'
+import Employee from '../components/employee/Employee'
 import Items from '../components/items/Items'
 import styles from '../styles/Selection.module.css'
 
