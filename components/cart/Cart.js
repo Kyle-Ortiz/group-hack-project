@@ -11,7 +11,6 @@ function Cart({items}) {
                 return <ItemInCart item={item} key={index} />
             })}
             <br/><br/>
-            <button>Proceed to Checkout</button>
         </div>
     )
 

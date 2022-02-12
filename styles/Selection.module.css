@@ -19,7 +19,8 @@
     grid-template-areas: "company employee"
                          "searchItem cart"
                          "categories cart"
-                         "items cart";
+                         "items cart"
+                         "items checkoutButton";
     grid-template-columns: 70%;
     grid-gap: 1rem;
 }
@@ -69,6 +70,8 @@
     border: solid 2px #2e7d32;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow-x: hidden;
+    height: 450px;
     text-align: center;
 }
 
@@ -113,6 +116,33 @@ button.cartButtonCancel:hover {
     background: red;
     border-color: black;
     box-shadow: #8080808c 2px 4px 10px 2px;
+}
+
+.stickyTop {
+    position:sticky;
+    top: 0px;
+    background: white;
+    padding-top: 15px;
+}
+
+.checkoutButton {
+    grid-area: checkoutButton;
+    justify-self: center;
+    align-self: top;
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 20px;
+    background: #0C5465;
+    border-radius: 8px;
+    border: solid 2px #fff;
+    color: white;
+}
+
+.checkoutButton:hover {
+    background: #fff;
+    border-color: #0C5465;
+    box-shadow: #8080808c 2px 4px 10px 2px;
+    color: black;
 }
 
 .itemsContainer{

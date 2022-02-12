@@ -1,3 +1,4 @@
+import { style } from '@mui/system'
 import React, {useContext} from 'react'
 import Cart from '../components/cart/Cart'
 import { CartContext } from '../components/cart/CartContext'
@@ -59,9 +60,11 @@ function Selection() {
                         </div>
 
                         <div className={styles.cartContainer}>
-                            <h4>Cart</h4>
+                            <h4 className={styles.stickyTop}>Cart</h4>
                             <Cart items={basket} />
                         </div>
+
+                        <button className={styles.checkoutButton}>Proceed to Checkout</button>
 
                         <div className={styles.itemsContainer}>
                             <h4>Items</h4>
