@@ -145,22 +145,22 @@ button.cartButtonCancel:hover {
     color: black;
 }
 
+
+
 .itemsContainer{
     background-color: #fff;
     grid-area: items;
     border: solid 2px #2e7d32;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 400px;
+    overflow-x: hidden;
 }
-
-
-
 
 .itemsOnScreen {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem 0rem;
-    /* justify-items:; */
 }
 
 .individualItemContainer {
