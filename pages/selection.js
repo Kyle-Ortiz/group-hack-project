@@ -11,14 +11,14 @@ import styles from '../styles/Selection.module.css'
 const itemsList = [
     {name: "Orange juice", category: "Beverages"}, 
     {name: "Lamp", category: "Home"}, 
-    {name: "Chicken Alfredo", category: "Pasta"}, 
+    {name: "Chicken Alfredo Pasta", category: "Pasta"}, 
     {name: "Corn muffin", category: "Pastries"},
     {name: "Steak", category: "Meats"},
     {name: "Spinach", category: "Vegetables"},
-    // {name: "Corn", category: "vegetables"},
-    // {name: "Strawberries", category: "Fruits"},
-    // {name: "Apple", category: "Fruits"},
-    // {name: "Watermelon", category: "Fruits"}
+    {name: "Corn", category: "vegetables"},
+    {name: "Strawberries", category: "Fruits"},
+    {name: "Apple", category: "Fruits"},
+    {name: "Watermelon", category: "Fruits"}
 ]
 
 const employeeInfo = {
@@ -67,7 +67,10 @@ function Selection() {
                         <button className={styles.checkoutButton}>Proceed to Checkout</button>
 
                         <div className={styles.itemsContainer}>
-                            <h4>Items</h4>
+                            <div>
+                                <h4>Items</h4>
+                                <p>Styling in progress</p>
+                            </div>
                             <Items items={itemsList}/>
                         </div>
                         

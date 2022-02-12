@@ -6,10 +6,11 @@ function ItemOnScreen({item}){
     const { addCartItem } = useContext(CartContext);
 
     return(
-        <div className={styles.individualItem} onClick={() => addCartItem(item)}>
-        {/* <div className='"individualItem' > */}
-            <div>{item.picture}</div>
-            <p>{item.name}</p>
+        <div className={styles.individualItemContainer} onClick={() => addCartItem(item)}>
+            <div className={styles.individualItem} >
+                <div>{item.picture}</div>
+                <p>{item.name}</p>
+            </div>
         </div>
     )
 
