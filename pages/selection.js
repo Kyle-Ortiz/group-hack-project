@@ -11,7 +11,13 @@ const itemsList = [
     {name: "Orange juice", category: "Beverages"}, 
     {name: "Lamp", category: "Home"}, 
     {name: "Chicken Alfredo", category: "Pasta"}, 
-    {name: "Corn muffin", category: "Pastries"}
+    {name: "Corn muffin", category: "Pastries"},
+    {name: "Steak", category: "Meats"},
+    {name: "Spinach", category: "Vegetables"},
+    // {name: "Corn", category: "vegetables"},
+    // {name: "Strawberries", category: "Fruits"},
+    // {name: "Apple", category: "Fruits"},
+    // {name: "Watermelon", category: "Fruits"}
 ]
 
 const employeeInfo = {

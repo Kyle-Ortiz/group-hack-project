@@ -125,8 +125,13 @@ button.cartButtonCancel:hover {
 
 .itemsOnScreen {
     display: grid;
-    grid-template-columns: 1 1;
-    grid-template-rows: 1 1;
-    justify-items: center;
-    /* grid-template-rows: max-content; */
+    /* justify-items: center; */
+    grid-template-columns:1fr 1fr;
+    
+}
+
+.individualItem {
+    border: solid 1px blue;
+    text-align: center;
+    max-width: 80%;
 }
