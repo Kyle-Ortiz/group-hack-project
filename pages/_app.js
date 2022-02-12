@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import signup from '../styles/form.css' 
+// import signup from '../styles/form.css' 
 import { CartProvider } from '../components/cart/CartContext'
 
 

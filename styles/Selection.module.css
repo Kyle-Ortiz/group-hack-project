@@ -29,12 +29,18 @@
     background-color: #fff;
     grid-area: company;
     border: solid 2px #2e7d32;
-    padding: 1.5rem;
+    /* padding: 1.5rem;   commented out by Luis to merge navbar into company container */   
+    padding: 0rem;
     margin: 1rem 0 0 0;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.companyContainer h4{
+
+.company {
+    padding: 1.5rem;
+}
+
+.company h4{
     font-size: 1.5rem;
 }
 
