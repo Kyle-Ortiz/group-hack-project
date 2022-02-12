@@ -4,10 +4,9 @@ import styles from '../../styles/Selection.module.css'
 
 function Items({items}) {
 
-    if(!items.length) return <p>Sorry, no items to display</p>
+    if(!items.length) return <p>Sorry, there are currently no items in this category</p>
 
     return (
-        // <div className='itemsScreen'>
         <div className={styles.itemsOnScreen}>
             {items.map((item, index) => {
                 return <ItemOnScreen item={item} key={index}/>
