@@ -10,11 +10,17 @@ import NavBar from '../components/navbar/NavBar'
 import styles from '../styles/Selection.module.css'
 
 const itemsList = [
-    {name: "Orange juice", category: "Beverages"}, 
+    {name: "Orange juice", category: "Beverages", picture: "https://devblogimages.s3-us-east-2.amazonaws.com/vNviR5jZz3eZajtkKtGqbF.png"}, 
     {name: "Lamp", category: "Home"}, 
     {name: "Chicken Alfredo Pasta", category: "Pasta"}, 
     {name: "Corn muffin", category: "Pastries"},
     {name: "Steak", category: "Meats"},
+    {name: "Spinach", category: "Vegetables"},
+    {name: "Corn", category: "vegetables"},
+    {name: "Strawberriessssss", category: "Fruits"},
+    {name: "Apple", category: "Fruits"},
+    {name: "Watermelon", category: "Fruits"},
+
     {name: "Spinach", category: "Vegetables"},
     {name: "Corn", category: "vegetables"},
     {name: "Strawberries", category: "Fruits"},

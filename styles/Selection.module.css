@@ -167,7 +167,7 @@ button.cartButtonCancel:hover {
 
 .itemsOnScreen {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem 0rem;
     height: 250px;
     overflow-x: hidden;
@@ -177,7 +177,7 @@ button.cartButtonCancel:hover {
     border: solid 1px red;
     padding: 1rem 1rem;
     width: 7rem;
-    min-height: 7rem;
+    /* min-height: 7rem; */
     border-radius: 1rem;
     justify-self: center;
     align-self: start;
