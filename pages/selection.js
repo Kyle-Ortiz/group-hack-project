@@ -28,7 +28,8 @@ const employeeInfo = {
 }
 
 const categoriesList = [
-    "Home", "Beverages", "Pasta", "Pastries"
+    "Home", "Beverages", "Pasta", "Pastries", "Furniture", "Electronics", 
+    "School", "Babies", "Cleaning", "Selfcare"
 ]
 
 function Selection() {

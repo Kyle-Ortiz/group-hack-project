@@ -30,19 +30,19 @@
     grid-area: company;
     border: solid 2px #2e7d32;
     /* padding: 1.5rem;   commented out by Luis to merge navbar into company container */   
-    padding: 0rem;
     margin: 1rem 0 0 0;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .company {
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
-.company h4{
+/* Commennted out by Luis */
+/* .company h4{
     font-size: 1.5rem;
-}
+} */
 
 .employeeContainer{
     background-color: #fff;
@@ -60,6 +60,7 @@
     border: solid 2px #2e7d32;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1rem;
 }
 
 .categoriesContainer{
@@ -68,6 +69,7 @@
     border: solid 2px #2e7d32;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1rem;;
 }
 
 .cartContainer{
@@ -152,21 +154,23 @@ button.cartButtonCancel:hover {
 }
 
 
-
 .itemsContainer{
     background-color: #fff;
     grid-area: items;
     border: solid 2px #2e7d32;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: 400px;
-    overflow-x: hidden;
+    
+    padding: 1rem;;
+    /* overflow-x: hidden; */
 }
 
 .itemsOnScreen {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem 0rem;
+    height: 250px;
+    overflow-x: hidden;
 }
 
 .individualItemContainer {

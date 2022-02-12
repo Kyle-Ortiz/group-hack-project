@@ -1,0 +1,12 @@
+.categoryList {
+    display: flex;
+    overflow-y: hidden;
+    /* border: solid 1px pink; */
+}
+
+.individualCategory {
+    padding: .4rem .5rem;
+    background-color: bisque;
+    margin: .5rem .5rem 0rem .5rem;
+    border-radius: 10%;
+}
