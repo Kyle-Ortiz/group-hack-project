@@ -3,7 +3,7 @@ import React, {useContext} from 'react'
 import Cart from '../components/cart/Cart'
 import { CartContext } from '../components/cart/CartContext'
 import Categories from '../components/Categories'
-import Compnay from '../components/company/Company'
+import Company from '../components/company/Company'
 import Employee from '../components/employee/Employee'
 import Items from '../components/items/Items'
 import NavBar from '../components/navbar/NavBar'
@@ -42,7 +42,7 @@ function Selection() {
                         
                         <div className={styles.companyContainer}>
                             <NavBar />     
-                            <Compnay />
+                            <Company />
                         </div>
 
                         <div className={styles.employeeContainer}>
