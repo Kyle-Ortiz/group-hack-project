@@ -1,24 +1,29 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../cart/CartContext';
 import styles from '../../styles/Selection.module.css'
+
 function ItemOnScreen({item}){
 
     const { addCartItem } = useContext(CartContext);
 
     return (
         <div className={styles.individualItemContainer} onClick={() => addCartItem(item)}>
+            
+            <img 
+                src={item.picture} 
+                width="110px"
+                height="75px" 
+                style={{
+                    objectFit:"contain",
+                    border: "solid 1px green",
+                    borderTopLeftRadius: "1rem",
+                    borderTopRightRadius: "1rem",
+                }}
+            />
+            
             <div className={styles.individualItem} >
-                
-                    <img 
-                        src={item.picture} 
-                        width="75px" 
-                        height="75px" 
-                        style={{
-                            objectFit:"fill",
-                            border: "solid 1px green"
-                        }}
-                    />
                 <p>{item.name}</p>
+                ${item.price} 
             </div>
         </div>
     )

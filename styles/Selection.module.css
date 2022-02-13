@@ -160,24 +160,20 @@ button.cartButtonCancel:hover {
     border: solid 2px #2e7d32;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    
     padding: 1rem;;
-    /* overflow-x: hidden; */
 }
 
 .itemsOnScreen {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem 0rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.2rem 0rem;
     height: 250px;
     overflow-x: hidden;
 }
 
 .individualItemContainer {
     border: solid 1px red;
-    padding: 1rem 1rem;
-    width: 7rem;
-    /* min-height: 7rem; */
+    width: var(--itemOnScreenWidth);
     border-radius: 1rem;
     justify-self: center;
     align-self: start;
@@ -185,4 +181,5 @@ button.cartButtonCancel:hover {
 
 .individualItem {
     border: solid 1px blue;
+    padding: .5rem;
 }
