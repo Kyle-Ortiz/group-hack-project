@@ -23,7 +23,7 @@ function ItemOnScreen({item}){
             
             <div className={styles.individualItem} >
                 <p>{item.name}</p>
-                ${item.price} 
+                <strong>${item.price} </strong>
             </div>
         </div>
     )

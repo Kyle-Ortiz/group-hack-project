@@ -181,5 +181,7 @@ button.cartButtonCancel:hover {
 
 .individualItem {
     border: solid 1px blue;
+    border-radius: 0 0 1rem 1rem;
     padding: .5rem;
+    text-align: center;
 }
