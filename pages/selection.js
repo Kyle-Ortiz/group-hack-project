@@ -37,10 +37,13 @@ const categoriesList = [
     "Home", "Beverages", "Pasta", "Pastries", "Furniture", "Electronics", 
     "School", "Babies", "Cleaning", "Selfcare"
 ]
+console.log("Main page rendered")
 
 function Selection() {
 
   const { basket } = useContext(CartContext);
+
+  console.log("Main page rendered inside component")
 
   return (
       <div className={styles.container}>
