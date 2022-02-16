@@ -6,6 +6,8 @@ function ItemOnScreen({item}){
 
     const { addCartItem } = useContext(CartContext);
 
+    console.log("Individual item container rendered")
+    
     return (
         <div className={styles.individualItemContainer} onClick={() => addCartItem(item)}>
             

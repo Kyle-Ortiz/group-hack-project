@@ -1,7 +1,7 @@
 import { style } from '@mui/system'
 import React, {useContext} from 'react'
 import Cart from '../components/cart/Cart'
-import { CartContext } from '../components/cart/CartContext'
+import { CartProvider } from '../components/cart/CartContext'
 import { AppContext } from '../appState/appState'
 import Categories from '../components/Categories'
 import Company from '../components/company/Company'
@@ -42,8 +42,8 @@ console.log("Main page rendered")
 
 function Selection() {
 
-  const { basket, clearCart } = useContext(CartContext);
   const { globalState } = useContext(AppContext) 
+  
   console.log(globalState)
   console.log("Main page rendered inside component")
 
@@ -73,21 +73,21 @@ function Selection() {
                             <Categories categories={categoriesList} />
                         </div>
 
-                        <div className={styles.cartContainer}>
-                                <button onClick={() => clearCart()}>Clear cart</button>
-                                <h4 className={styles.stickyTop}>Cart</h4>
-                            <Cart items={basket} />
-                        </div>
-
-                        <button className={styles.checkoutButton}>Proceed to Checkout</button>
-
-                        <div className={styles.itemsContainer}>
-                            <div>
-                                <h4>Items</h4>
-                                <p>Styling in progress</p>
+                        <CartProvider>
+                            <div className={styles.cartContainer}>
+                                <Cart />
                             </div>
-                            <Items items={itemsList}/>
-                        </div>
+
+                            <button className={styles.checkoutButton}>Proceed to Checkout</button>
+
+                            <div className={styles.itemsContainer}>
+                                <div>
+                                    <h4>Items</h4>
+                                    <p>Styling in progress</p>
+                                </div>
+                                <Items items={itemsList}/>
+                            </div>
+                        </CartProvider>
                         
                 </div>
             </div>
