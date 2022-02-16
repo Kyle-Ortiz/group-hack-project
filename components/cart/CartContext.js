@@ -42,12 +42,18 @@ export const CartProvider = ( {children }) => {
         setBasket([...itemsList.values()])
     }
 
+    function clearCart() {
+        itemsList.clear();
+        setBasket([])
+    }
+
     return (
         <CartContext.Provider 
             value= {{
                 addCartItem,
                 subtractCartItem,
                 eliminateCartItem,
+                clearCart,
                 basket
             }} 
         >

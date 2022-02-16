@@ -2,6 +2,7 @@ import { style } from '@mui/system'
 import React, {useContext} from 'react'
 import Cart from '../components/cart/Cart'
 import { CartContext } from '../components/cart/CartContext'
+import { AppContext } from '../appState/appState'
 import Categories from '../components/Categories'
 import Company from '../components/company/Company'
 import Employee from '../components/employee/Employee'
@@ -41,8 +42,9 @@ console.log("Main page rendered")
 
 function Selection() {
 
-  const { basket } = useContext(CartContext);
-
+  const { basket, clearCart } = useContext(CartContext);
+  const { globalState } = useContext(AppContext) 
+  console.log(globalState)
   console.log("Main page rendered inside component")
 
   return (
@@ -53,6 +55,7 @@ function Selection() {
                         <div className={styles.companyContainer}>
                             <NavBar />     
                             <Company />
+                            {/* <button onClick={() => changeState({type: ""})}>Add item</button> */}
                         </div>
 
                         <div className={styles.employeeContainer}>
@@ -71,7 +74,8 @@ function Selection() {
                         </div>
 
                         <div className={styles.cartContainer}>
-                            <h4 className={styles.stickyTop}>Cart</h4>
+                                <button onClick={() => clearCart()}>Clear cart</button>
+                                <h4 className={styles.stickyTop}>Cart</h4>
                             <Cart items={basket} />
                         </div>
 
