@@ -9,6 +9,7 @@ export default function itemsReducer (state = defaultState, action={}) {
         "SET_ITEMS": {...state, items: action.payload},
         "ADD_ITEM": {...state, items: [...state.items, action.payload ]},
         "DELETE_ITEM": function(){
+
             return (
                 "hi"
             )

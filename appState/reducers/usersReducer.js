@@ -1,5 +1,4 @@
 const defaultState = {
-    users: [],
     current_user: {}
 }
 

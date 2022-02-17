@@ -63,12 +63,12 @@ function Selection() {
                             <Employee employeeInfo={employeeInfo}/>
                         </div>
 
-                        <div className={styles.itemSearch}>
-                            <h4>Search Item</h4>
-                            <input type="text" ></input>
-                        </div>
-
-                        <div className={styles.categoriesContainer}>
+                        <div className={styles.itemSearchAndcategoriesContainer}>
+                            <div className={styles.itemSearch}>
+                                <h4>Search Item</h4>
+                                <input type="text" ></input>
+                            </div>
+                            <hr/>
                             <h4>Categories</h4>
                             <Categories categories={categoriesList} />
                         </div>

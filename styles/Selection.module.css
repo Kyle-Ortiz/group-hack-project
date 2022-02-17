@@ -17,8 +17,8 @@
 .selectionContainer {
     display: grid;
     grid-template-areas: "company employee"
-                         "searchItem cart"
-                         "categories cart"
+                         "searchItemAndCategories cart"
+                         /* "categories cart" */
                          "items cart"
                          "items checkoutButton";
     grid-template-columns: 70%;
@@ -54,18 +54,19 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.itemSearch{
+/* This styling needs to be changed */
+/* .itemSearch{
     background-color: #fff;
     grid-area: searchItem;
     border: solid 2px #2e7d32;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 1rem;
-}
+} */
 
-.categoriesContainer{
+.itemSearchAndcategoriesContainer{
     background-color: #fff;
-    grid-area: categories;
+    grid-area: searchItemAndCategories;
     border: solid 2px #2e7d32;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -184,4 +185,5 @@ button.cartButtonCancel:hover {
     border-radius: 0 0 1rem 1rem;
     padding: .5rem;
     text-align: center;
+    overflow-y: hidden;
 }

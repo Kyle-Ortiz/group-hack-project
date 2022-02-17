@@ -22,8 +22,9 @@ export const CartProvider = ( {children }) => {
         // convert the values of the itemsList map into an array
         setBasket([...itemsList.values()])
     }
-
+    
     function subtractCartItem(item){
+        
         const { name } = item
         const updatedItem = itemsList.get(name);
 
@@ -54,7 +55,7 @@ export const CartProvider = ( {children }) => {
                 subtractCartItem,
                 eliminateCartItem,
                 clearCart,
-                basket
+                basket,
             }} 
         >
             {children}
