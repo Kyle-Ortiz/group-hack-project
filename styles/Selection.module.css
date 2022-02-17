@@ -2,23 +2,12 @@
      padding: 0 2rem;
      background-color: azure;
      height: 100vh;
-  }
-  
-  /* .main {
-    min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } */
+}
 
 .selectionContainer {
     display: grid;
     grid-template-areas: "company employee"
                          "searchItemAndCategories cart"
-                         /* "categories cart" */
                          "items cart"
                          "items checkoutButton";
     grid-template-columns: 70%;
@@ -39,10 +28,6 @@
     padding: 1rem;
 }
 
-/* Commennted out by Luis to reduce the vertical space taken by the letters */
-/* .company h4{
-    font-size: 1.5rem;
-} */
 
 .employeeContainer{
     background-color: #fff;
@@ -84,55 +69,6 @@
     text-align: center;
 }
 
-.itemInCart {
-    text-align: left;
-    padding: 5px;
-    background: azure;
-    border-radius: 5px;
-    margin: 10px;
-    border: solid 2px #2e7d32;
-    /* margin-bottom: 15px; */
-    box-shadow: #8080808c 2px 4px 10px 2px;
-}
-
-button.cartButton {
-    width: 30%;
-    padding: 2px;
-    margin: 3px;
-    background: #fff;
-    border: solid 2px #2e7d32;
-    border-radius: 5px;
-}
-
-button.cartButton:hover {
-    color: #fff;
-    background: #2e7d32;
-    border-color: #fff;
-    box-shadow: #8080808c 2px 4px 10px 2px;
-}
-
-button.cartButtonCancel {
-    width: 30%;
-    padding: 2px;
-    margin: 3px;
-    background: #fff;
-    border: solid 2px red;
-    border-radius: 5px;
-}
-
-button.cartButtonCancel:hover {
-    color: black;
-    background: red;
-    border-color: black;
-    box-shadow: #8080808c 2px 4px 10px 2px;
-}
-
-.stickyTop {
-    position:sticky;
-    top: 0px;
-    background: white;
-    padding-top: 15px;
-}
 
 .checkoutButton {
     grid-area: checkoutButton;
@@ -164,26 +100,4 @@ button.cartButtonCancel:hover {
     padding: 1rem;;
 }
 
-.itemsOnScreen {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1.2rem 0rem;
-    height: 250px;
-    overflow-x: hidden;
-}
 
-.individualItemContainer {
-    border: solid 1px red;
-    width: var(--itemOnScreenWidth);
-    border-radius: 1rem;
-    justify-self: center;
-    align-self: start;
-} 
-
-.individualItem {
-    border: solid 1px blue;
-    border-radius: 0 0 1rem 1rem;
-    padding: .5rem;
-    text-align: center;
-    overflow-y: hidden;
-}

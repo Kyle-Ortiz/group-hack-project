@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../cart/CartContext';
-import styles from '../../styles/Selection.module.css'
+import styles from '../../styles/items.module.css'
 
 function ItemOnScreen({item}){
 
     const { addCartItem } = useContext(CartContext);
-    
+
     console.log("Individual item container rendered")
 
     return (

@@ -48,48 +48,44 @@ function Selection() {
   console.log("Main page rendered inside component")
 
   return (
-      <div className={styles.container}>
-          <div className={styles.main}>
-                <div className={styles.selectionContainer}>
-                        
-                        <div className={styles.companyContainer}>
-                            <NavBar />     
-                            <Company />
-                            {/* <button onClick={() => changeState({type: ""})}>Add item</button> */}
+      <div className={styles.container}>          
+            <div className={styles.selectionContainer}>
+                    
+                    <div className={styles.companyContainer}>
+                        <NavBar />     
+                        <Company />
+                    </div>
+
+                    <div className={styles.employeeContainer}>
+                        <h4>Current Employee:</h4>
+                        <Employee employeeInfo={employeeInfo}/>
+                    </div>
+
+                    <div className={styles.itemSearchAndcategoriesContainer}>
+                        <div className={styles.itemSearch}>
+                            <h4>Search Item</h4>
+                            <input type="text" ></input>
                         </div>
+                        <hr/>
+                        <h4>Categories</h4>
+                        <Categories categories={categoriesList} />
+                    </div>
 
-                        <div className={styles.employeeContainer}>
-                            <h4>Current Employee:</h4>
-                            <Employee employeeInfo={employeeInfo}/>
+                    <CartProvider>
+                        <div className={styles.cartContainer}>
+                            <Cart />
                         </div>
+                        <button className={styles.checkoutButton}>Proceed to Checkout</button>
 
-                        <div className={styles.itemSearchAndcategoriesContainer}>
-                            <div className={styles.itemSearch}>
-                                <h4>Search Item</h4>
-                                <input type="text" ></input>
+                        <div className={styles.itemsContainer}>
+                            <div>
+                                <h4>Items</h4>
+                                <p>Styling in progress</p>
                             </div>
-                            <hr/>
-                            <h4>Categories</h4>
-                            <Categories categories={categoriesList} />
+                            <Items items={itemsList}/>
                         </div>
-
-                        <CartProvider>
-                            <div className={styles.cartContainer}>
-                                <Cart />
-                            </div>
-
-                            <button className={styles.checkoutButton}>Proceed to Checkout</button>
-
-                            <div className={styles.itemsContainer}>
-                                <div>
-                                    <h4>Items</h4>
-                                    <p>Styling in progress</p>
-                                </div>
-                                <Items items={itemsList}/>
-                            </div>
-                        </CartProvider>
-                        
-                </div>
+                    </CartProvider>
+                    
             </div>
       </div>
   )

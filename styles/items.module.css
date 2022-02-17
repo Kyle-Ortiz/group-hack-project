@@ -1,0 +1,23 @@
+.itemsOnScreen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.2rem 0rem;
+    height: 250px;
+    overflow-x: hidden;
+}
+
+.individualItemContainer {
+    border: solid 1px red;
+    width: var(--itemOnScreenWidth);
+    border-radius: 1rem;
+    justify-self: center;
+    align-self: start;
+} 
+
+.individualItem {
+    border: solid 1px blue;
+    border-radius: 0 0 1rem 1rem;
+    padding: .5rem;
+    text-align: center;
+    overflow-y: hidden;
+}

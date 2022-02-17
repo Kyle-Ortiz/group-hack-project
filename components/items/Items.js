@@ -1,6 +1,6 @@
 import React from 'react'
 import ItemOnScreen from './ItemOnScreen'
-import styles from '../../styles/Selection.module.css'
+import styles from '../../styles/items.module.css'
 
 function Items({items}) {
 
