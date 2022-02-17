@@ -1,8 +1,13 @@
+import React, { useContext } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import { AppContext } from '../appState/appState';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  const { globalState }  = useContext(AppContext);
+  const companies = globalState.companies
   return (
     <div className={styles.container}>
       <Head>
@@ -13,42 +18,58 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">POS App!</a>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Select your company
+          {/* <code className={styles.code}>pages/index.js</code> */}
         </p>
 
         <div className={styles.grid}>
+          
+          {/* Keep this code hre, ti will be used later  */}
+          {companies.map( ({name, logo}) => {
+            return (
+              <a href="https://nextjs.org/docs" className={styles.card}>
+                  <img  src={logo} />
+                  <h2>{name}</h2>
+                  <p>Find in-depth information about Next.js features and API.</p>
+                </a>
+            )
+          })}
+
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
+            <img  src="https://camo.githubusercontent.com/1c94b38e955ab102dede85a82e317a3c8b94369c562d559d4663ab030fa5d983/687474703a2f2f7069676d656e742e6769746875622e696f2f66616b652d6c6f676f732f6c6f676f732f766563746f722f636f6c6f722f677265656e732d666f6f642d737570706c696572732e737667"/>
+            <h2>Green Food Suppliers</h2>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
+            <img src="https://devblogimages.s3-us-east-2.amazonaws.com/vNviR5jZz3eZajtkKtGqbF.png" />
+            <h2>TODO Retailers</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
-          <a
+          <a href="https://nextjs.org/learn" className={styles.card}>
+            <img src="https://devblogimages.s3-us-east-2.amazonaws.com/3nn1XRJDj5sxRoe9F4WnJd.png" />
+            <h2>Tech Masters</h2>
+            <p>Find pieces!</p>
+          </a>
+
+          <a href="https://nextjs.org/learn" className={styles.card}>
+            <img src="https://devblogimages.s3-us-east-2.amazonaws.com/iv4dL1dUoCmfmo3eAH4Drs.jpeg" />
+            <h2>Decora</h2>
+            <p>Everything for your home</p>
+          </a>
+
+          {/* <a
             href="https://github.com/vercel/next.js/tree/canary/examples"
             className={styles.card}
           >
             <h2>Examples &rarr;</h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          </a> */}
         </div>
       </main>
 

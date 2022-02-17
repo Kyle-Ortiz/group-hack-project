@@ -1,7 +1,8 @@
 import React, { createContext, useMemo, useState } from 'react'
-import companyReducer from './reducers/companyReducer';
+import companies from './reducers/companies';
 import itemsReducer from './reducers/itemsReducer';
 import usersReducer from './reducers/usersReducer';
+import companyProfile from './reducers/companyProfile';
 
 export const AppContext = createContext();
 
@@ -9,7 +10,8 @@ export const AppContext = createContext();
 const reducers = {
     items: itemsReducer,
     users: usersReducer,
-    companyProfile: companyReducer
+    companies,
+    companyProfile
 }
 
 // Mimicking redux's combineReducers function
@@ -53,6 +55,9 @@ export const AppProvider = ({children}) => {
         const newState = rootReducer(globalState, action)
         setGlobalState(newState)
     }
+
+    // const partialState= () => globalState
+
 
     const value = useMemo( () => ({globalState, changeState}),[globalState, changeState])
 

@@ -15,13 +15,14 @@ a {
   box-sizing: border-box;
 }
 
-  /* Added by Luis */
-p, h1, h2, h3, h4,h5, h6 {
+/* Added by Luis */
+p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* Added by Luis */
 :root {
   --navbarHeight: 45px;
   --itemOnScreenWidth: 7rem;
 }
-  /* Added by Luis */
+  

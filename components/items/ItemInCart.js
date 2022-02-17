@@ -8,7 +8,7 @@ function ItemInCart({item}) {
 
     return (
         <div className={styles.itemInCart}>
-            <p>{item.name} x {item.quantity} @ ${item.price}</p>
+            <p>{item.name} x {item.quantity} @ <strong>${item.price}</strong></p>
             <button className={styles.cartButtonCancel} onClick={() => eliminateCartItem(item)}>
                 X
             </button>  

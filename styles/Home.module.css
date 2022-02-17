@@ -83,6 +83,13 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  height: 285px;
+}
+
+.card img {
+  width: 250px;
+  height: 100px;
+  object-fit: fill;
 }
 
 .card:hover,
