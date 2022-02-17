@@ -56,12 +56,7 @@ export const AppProvider = ({children}) => {
         setGlobalState(newState)
     }
 
-    // const partialState= () => globalState
-
-
     const value = useMemo( () => ({globalState, changeState}),[globalState, changeState])
-
-    // const value = { globalState }
 
     return (
         <AppContext.Provider value = {value}> 

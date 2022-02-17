@@ -1,7 +1,7 @@
+import React, { useState, useContext } from 'react';
 import { Button, TextField } from '@mui/material';
-import { useState } from 'react'
-import React from 'react';
 import Link from 'next/link'
+import { AppContext } from '../appState/appState';
 
 
 const firstState = {
@@ -21,7 +21,17 @@ function Signin() {
           //send form to backend for account creation
           setSignInForm(firstState)
      }
+
+     console.log("Sigin component rendered")
+
+     const { globalState } = useContext(AppContext);
+
+     const selectedCompany = globalState.companyProfile;
+
   return <form className="form">
+               <div>
+                    <img src={selectedCompany.logo} />
+               </div>
                <div >
                     <h1 className="form-header">Sign In</h1>
                </div>

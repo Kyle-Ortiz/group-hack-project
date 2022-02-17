@@ -1,7 +1,7 @@
 export default function companies(state = [], action={}) {
 
-    const commnad= {
-        "SET_COMPANIES": {state: action.payload }
+    const command= {
+        "SET_COMPANIES": action.payload 
     }
-    return state
+    return command[action.type] || state
 }

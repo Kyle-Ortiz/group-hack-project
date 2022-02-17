@@ -1,4 +1,3 @@
-import { style } from '@mui/system'
 import React, {useContext} from 'react'
 import Cart from '../components/cart/Cart'
 import { CartProvider } from '../components/cart/CartContext'
@@ -9,6 +8,39 @@ import Employee from '../components/employee/Employee'
 import Items from '../components/items/Items'
 import NavBar from '../components/navbar/NavBar'
 import styles from '../styles/Selection.module.css'
+
+export const subscribedCompanies = [
+    {
+        name: "Greens Food Suppliers",
+        logo: "https://camo.githubusercontent.com/1c94b38e955ab102dede85a82e317a3c8b94369c562d559d4663ab030fa5d983/687474703a2f2f7069676d656e742e6769746875622e696f2f66616b652d6c6f676f732f6c6f676f732f766563746f722f636f6c6f722f677265656e732d666f6f642d737570706c696572732e737667",
+        description: "Delivering outstanding groceries!",
+        industry: [],
+        categories: ["Dairy", "Beverages", "Pasta", "Pastries", "Meats", "Electronics", "Cleaning", "Canned"],
+    },
+    {
+        name: "TODO Retailers",
+        logo: "https://devblogimages.s3-us-east-2.amazonaws.com/vNviR5jZz3eZajtkKtGqbF.png",
+        description: "All your clothig needs in one place.",
+        industry: [],
+        categories: ["Pants", "Skirts", "Blouses", "Belts", "Sneakers", "Shoes", "Shirts", "Jackets"],
+    },
+    {
+        name: "Tech Master",
+        logo: "https://devblogimages.s3-us-east-2.amazonaws.com/3nn1XRJDj5sxRoe9F4WnJd.png",
+        description:"We are the experts in computer hardware." ,
+        industry: [],
+        categories: ["Laptops", "Desktops", "Tablets", "Monitors", "Chargers", "Keyboards", "Mouses", "Screen Protection"],
+    },
+    {
+        name: "Decora",
+        logo: "https://devblogimages.s3-us-east-2.amazonaws.com/iv4dL1dUoCmfmo3eAH4Drs.jpeg",
+        description: "Make your home comfty: Decora.",
+        industry: [],
+        categories: ["Tables", "Sofas", "Lamps", "Desks", "Frames", "Mirrors", "Drawers", "Bookshelf"],
+    }
+    
+]
+
 
 const itemsList = [
     {name: "Orange juice", price: 3.99, category: "Beverages", picture: "https://devblogimages.s3-us-east-2.amazonaws.com/vNviR5jZz3eZajtkKtGqbF.png"}, 
@@ -35,10 +67,14 @@ const employeeInfo = {
 }
 
 const categoriesList = [
-    "Home", "Beverages", "Pasta", "Pastries", "Furniture", "Electronics", 
-    "School", "Babies", "Cleaning", "Selfcare"
+    "Dairy", "Beverages", "Pasta", "Pastries", "Meats", "Electronics", 
+    "Cleaning", "Canned"
 ]
+
+
 console.log("Main page rendered")
+
+
 
 function Selection() {
 
