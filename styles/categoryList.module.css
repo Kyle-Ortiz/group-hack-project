@@ -1,12 +1,13 @@
 .categoryList {
     display: flex;
-    overflow-y: hidden;
+    inline-size: max-content;
 }
+
+.categoryListWrapper { overflow-y: hidden;}
 
 .individualCategory {
     padding: .4rem .8rem;
     background-color: bisque;
     margin: .5rem .5rem 0rem .5rem;
     border-radius: 10%;
-    text-overflow: ellipsis;
 }
