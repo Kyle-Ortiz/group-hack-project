@@ -4,12 +4,16 @@ import Image from 'next/image'
 import { AppContext } from '../appState/appState';
 import styles from '../styles/Home.module.css'
 import { subscribedCompanies } from './selection';
+import { useRouter } from 'next/router';
+import { slugify } from '../utilities/slug';
 
 export default function Home() {
 
   const { globalState, changeState }  = useContext(AppContext);
 
   const { companies } = globalState;
+
+  const router = useRouter();
 
   useEffect(() => {
     changeState({type: "SET_COMPANIES", payload: subscribedCompanies })
@@ -18,8 +22,11 @@ export default function Home() {
   console.log(globalState)
 
   function setCompany(company) {
-    changeState({type: "SET_COMPANY", payload: company})
+    changeState({type: "SET_COMPANY", payload: company});
+    router.push(slugify(company.name) + '/signin')
+    // router.push('/signin')
   }
+  console.log("Home was rendered")
   
   return (
     <div className={styles.container}>

@@ -28,7 +28,6 @@
     padding: 1rem;
 }
 
-
 .employeeContainer{
     background-color: #fff;
     grid-area: employee;
@@ -69,7 +68,6 @@
     text-align: center;
 }
 
-
 .checkoutButton {
     grid-area: checkoutButton;
     justify-self: center;
@@ -90,7 +88,6 @@
     color: black;
 }
 
-
 .itemsContainer{
     background-color: #fff;
     grid-area: items;
@@ -98,6 +95,7 @@
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 1rem;;
+    margin-bottom: .5rem;
 }
 
 

@@ -1,43 +1,77 @@
 import React, { useState, useContext } from 'react';
 import { Button, TextField } from '@mui/material';
-import Link from 'next/link'
 import { AppContext } from '../appState/appState';
+import { useRouter } from 'next/router';
+import Link from 'next/link'
+import { employees } from '../pages/selection';
 
-
-const firstState = {
-     "employeeId" : "",
-     "password" : "",
-    }
 
 function Signin() {
-     //add error toggling if any field is left blank?
+
+     const firstState = {
+          "employeeId" : "",
+          "password" : "",
+     }
+
+     const router = useRouter();
      const [signInForm, setSignInForm] = useState(firstState)
+
+     const { globalState, changeState } = useContext(AppContext);
+     const selectedCompany = globalState.companyProfile;
+     
+     
      const inputChange = (e) => {
           setSignInForm({...signInForm, 
-              [e.target.name] : e.target.value}
-          )
+              [e.target.name]: e.target.value
+          })
      }
+
      const submit = (e) => {
-          //send form to backend for account creation
-          setSignInForm(firstState)
+          e.preventDefault()
+          const current_user = employees.find(user => user.employeeId === signInForm.employeeId)
+          if(!current_user || current_user?.password !== signInForm.password) return setSignInForm(firstState)
+          changeState({type: "SET_CURRENT_USER", payload: current_user})
+          router.push('/selection')
      }
 
      console.log("Sigin component rendered")
 
-     const { globalState } = useContext(AppContext);
-
-     const selectedCompany = globalState.companyProfile;
-
-  return <form className="form">
+ 
+  return <form className="form" onSubmit={submit}>
                <div>
-                    <img src={selectedCompany.logo} />
+                    <img src={selectedCompany.logo} width="250px" height="100px" />
                </div>
                <div >
                     <h1 className="form-header">Sign In</h1>
                </div>
-              <TextField required className="text-field" id="outlined-basic" name="employeeId" value={signInForm.first} onChange={(e)=> inputChange(e)} label="Employee ID" variant="outlined" />
-              <TextField required className="text-field" id="outlined-basic2" type="password" name="password"value={signInForm.Password} onChange={(e) => inputChange(e)} label="Password" variant="outlined" />
-              <Button id="signup-button" color="success" onClick={submit}variant="contained">Sign In</Button>
+              <TextField 
+                    required 
+                    className="text-field" 
+                    id="outlined-basic" 
+                    name="employeeId" 
+                    value={signInForm.employeeId} 
+                    onChange={(e)=> inputChange(e)} 
+                    label="Employee ID" 
+                    variant="outlined" 
+              />
+              <TextField 
+                    required 
+                    className="text-field" 
+                    id="outlined-basic2" 
+                    name="password" 
+                    type="password" 
+                    value={signInForm.password} 
+                    onChange={(e) => inputChange(e)} 
+                    label="Password" 
+                    variant="outlined" 
+               />
+              <Button 
+                    id="signup-button" 
+                    color="success" 
+                    type="submit"
+                    variant="contained"
+               >Sign In
+               </Button>
               <p>Don{"'"}t have an account?  
                    <Link href="/signup">
                          <a>Sign up. </a>

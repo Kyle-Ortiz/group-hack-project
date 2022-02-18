@@ -41,6 +41,11 @@ export const subscribedCompanies = [
     
 ]
 
+export const employees = [
+    {name: "Kate Collins", employeeId: "54321", password: "posapp", isAdmin: true},
+    {name: "Pete Waters", employeeId: "12345", password: "posapp", isAdmin: false}
+]
+
 
 const itemsList = [
     {name: "Orange juice", price: 3.99, category: "Beverages", picture: "https://devblogimages.s3-us-east-2.amazonaws.com/vNviR5jZz3eZajtkKtGqbF.png"}, 
@@ -79,48 +84,49 @@ console.log("Main page rendered")
 function Selection() {
 
   const { globalState } = useContext(AppContext) 
-  
-  console.log(globalState)
+  const employee = globalState.users.current_user;
+  const company = globalState.companyProfile;
+
+  console.log(company)  
   console.log("Main page rendered inside component")
 
   return (
       <div className={styles.container}>          
             <div className={styles.selectionContainer}>
                     
-                    <div className={styles.companyContainer}>
-                        <NavBar />     
-                        <Company />
+                <div className={styles.companyContainer}>
+                    <NavBar />     
+                    <Company company={company} />
+                </div>
+
+                <div className={styles.employeeContainer}>
+                    <h4>Current Employee:</h4>
+                    <Employee employeeInfo={employee}/>
+                </div>
+
+                <div className={styles.itemSearchAndcategoriesContainer}>
+                    <div className={styles.itemSearch}>
+                        <h4>Search Item</h4>
+                        <input type="text" ></input>
                     </div>
+                    <hr/>
+                    <h4>Categories</h4>
+                    <Categories categories={company.categories} />
+                </div>
 
-                    <div className={styles.employeeContainer}>
-                        <h4>Current Employee:</h4>
-                        <Employee employeeInfo={employeeInfo}/>
+                <CartProvider>
+                    <div className={styles.cartContainer}>
+                        <Cart />
                     </div>
+                    <button className={styles.checkoutButton}>Proceed to Checkout</button>
 
-                    <div className={styles.itemSearchAndcategoriesContainer}>
-                        <div className={styles.itemSearch}>
-                            <h4>Search Item</h4>
-                            <input type="text" ></input>
+                    <div className={styles.itemsContainer}>
+                        <div>
+                            <h4>Items</h4>
                         </div>
-                        <hr/>
-                        <h4>Categories</h4>
-                        <Categories categories={categoriesList} />
+                        <Items items={itemsList}/>
                     </div>
-
-                    <CartProvider>
-                        <div className={styles.cartContainer}>
-                            <Cart />
-                        </div>
-                        <button className={styles.checkoutButton}>Proceed to Checkout</button>
-
-                        <div className={styles.itemsContainer}>
-                            <div>
-                                <h4>Items</h4>
-                                <p>Styling in progress</p>
-                            </div>
-                            <Items items={itemsList}/>
-                        </div>
-                    </CartProvider>
+                </CartProvider>
                     
             </div>
       </div>

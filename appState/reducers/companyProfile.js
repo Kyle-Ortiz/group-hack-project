@@ -3,6 +3,10 @@ const defaultState = {
     logo: {},
     industry: [],
     categories: [],
+    branding: {
+        background: "",
+        borders: ""
+    },
     transactions: []
 }
 

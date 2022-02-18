@@ -1,13 +1,18 @@
 const defaultState = {
-    current_user: {}
+    users: [],
+    current_user: {
+        // name: "",
+        // employeeId: ""
+    }
 }
 
 export default function usersReducer(state = defaultState, action={}) {
 
-    const commnad = {
-        "SET_USER": {...state, current_user: action.payload },
+    const command = {
+        "SET_USERS": {...state, users: action.payload},
+        "SET_CURRENT_USER": {...state, current_user: action.payload },
         "ADD_USER": {...state, users: [state.users, action.payload] }
     }
 
-    return commnad[action.type] || state;
+    return command[action.type] || state;
 }

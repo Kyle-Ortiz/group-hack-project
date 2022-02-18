@@ -17,7 +17,7 @@ function CompanyLogo({imageUrl}) {
                 width="60px"
                 height="60px"
                 style = {{
-                    objectFit: 'fill'
+                    objectFit: 'contain'
                 }}
             />
         </div>

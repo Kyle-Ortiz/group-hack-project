@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.2rem 0rem;
-    height: 250px;
+    /* max-height: 250px; */
+    height: 280px;
     overflow-x: hidden;
 }
 
