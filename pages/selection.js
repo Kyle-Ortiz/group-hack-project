@@ -47,7 +47,7 @@ export const employees = [
 ]
 
 
-const itemsList = [
+export const itemsList = [
     {name: "Orange juice", price: 3.99, category: "Beverages", picture: "https://devblogimages.s3-us-east-2.amazonaws.com/vNviR5jZz3eZajtkKtGqbF.png"}, 
     {name: "Lamp", price: 42.99, category: "Home", picture: "https://camo.githubusercontent.com/1c94b38e955ab102dede85a82e317a3c8b94369c562d559d4663ab030fa5d983/687474703a2f2f7069676d656e742e6769746875622e696f2f66616b652d6c6f676f732f6c6f676f732f766563746f722f636f6c6f722f677265656e732d666f6f642d737570706c696572732e737667"}, 
     {name: "Chicken Alfredo Pasta", price: 7.85, category: "Pasta", picture: "https://devblogimages.s3-us-east-2.amazonaws.com/vNviR5jZz3eZajtkKtGqbF.png"}, 
@@ -87,7 +87,7 @@ function Selection() {
   const employee = globalState.users.current_user;
   const company = globalState.companyProfile;
 
-  console.log(company)  
+  console.log(globalState)  
   console.log("Main page rendered inside component")
 
   return (

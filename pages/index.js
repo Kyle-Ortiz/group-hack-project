@@ -16,7 +16,7 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    changeState({type: "SET_COMPANIES", payload: subscribedCompanies })
+    changeState({type: "SUBSCRIBE_COMPANIES", payload: subscribedCompanies })
   }, [subscribedCompanies]);
 
   console.log(globalState)
@@ -27,7 +27,7 @@ export default function Home() {
     // router.push('/signin')
   }
   console.log("Home was rendered")
-  
+
   return (
     <div className={styles.container}>
       <Head>

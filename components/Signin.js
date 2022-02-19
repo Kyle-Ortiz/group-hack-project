@@ -3,7 +3,7 @@ import { Button, TextField } from '@mui/material';
 import { AppContext } from '../appState/appState';
 import { useRouter } from 'next/router';
 import Link from 'next/link'
-import { employees } from '../pages/selection';
+import { employees, itemsList } from '../pages/selection';
 
 
 function Signin() {
@@ -30,6 +30,7 @@ function Signin() {
           e.preventDefault()
           const current_user = employees.find(user => user.employeeId === signInForm.employeeId)
           if(!current_user || current_user?.password !== signInForm.password) return setSignInForm(firstState)
+          changeState({type: "SET_ITEMS", payload: itemsList})
           changeState({type: "SET_CURRENT_USER", payload: current_user})
           router.push('/selection')
      }
