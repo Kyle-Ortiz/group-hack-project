@@ -10,7 +10,6 @@ import { slugify } from '../utilities/slug';
 export default function Home() {
 
   const { globalState, changeState }  = useContext(AppContext);
-
   const { companies } = globalState;
 
   const router = useRouter();
@@ -20,7 +19,7 @@ export default function Home() {
   }, [subscribedCompanies]);
 
   console.log(globalState)
-
+  
   function setCompany(company) {
     changeState({type: "SET_COMPANY", payload: company});
     router.push(slugify(company.name) + '/signin')

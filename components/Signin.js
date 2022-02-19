@@ -30,8 +30,9 @@ function Signin() {
           e.preventDefault()
           const current_user = employees.find(user => user.employeeId === signInForm.employeeId)
           if(!current_user || current_user?.password !== signInForm.password) return setSignInForm(firstState)
-          changeState({type: "SET_ITEMS", payload: itemsList})
           changeState({type: "SET_CURRENT_USER", payload: current_user})
+          changeState({type: "SET_ITEMS", payload: itemsList})
+          
           router.push('/selection')
      }
 
@@ -42,6 +43,7 @@ function Signin() {
                <div>
                     <img src={selectedCompany.logo} width="250px" height="100px" />
                </div>
+               <div><p>Use this to login: employeeId: 12345, password: posapp</p></div>
                <div >
                     <h1 className="form-header">Sign In</h1>
                </div>

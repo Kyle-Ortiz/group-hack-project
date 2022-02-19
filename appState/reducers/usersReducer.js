@@ -13,6 +13,6 @@ export default function usersReducer(state = defaultState, action={}) {
         "SET_CURRENT_USER": {...state, current_user: action.payload },
         "ADD_USER": {...state, users: [state.users, action.payload] }
     }
-
+    // debugger
     return command[action.type] || state;
 }

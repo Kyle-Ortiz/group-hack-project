@@ -28,10 +28,10 @@ function aggregateReducers(reducers) {
             const reducerKey = keys[i];
             const reducerFunction = reducers[reducerKey];
             const slicedState = state[reducerKey];
-
+            
             nextState[reducerKey] = reducerFunction(slicedState, action)
         }
-
+        
         return nextState;
     }
 }
@@ -41,22 +41,25 @@ const rootReducer = aggregateReducers(reducers);
 
 export const AppProvider = ({children}) => {
 
-    const [globalState, setGlobalState ] = useState(rootReducer(({}, {})));
+    const initialState = rootReducer({},{})
+    const [globalState, setGlobalState ] = useState(initialState);
 
     function changeState(action) {
         if(typeof action !== "object" || action === null){
-            throw new Error('actions must be plain object.');
+            throw new Error('Actions must be plain objects.');
         }
 
         if(typeof action.type === 'undefined') {
             throw new Error('Actions may not have an undefined "type" property.');
         }
-
+        
         const newState = rootReducer(globalState, action)
         setGlobalState(newState)
+        
     }
 
     const value = useMemo( () => ({globalState, changeState}),[globalState, changeState])
+    // const value = {globalState, changeState}
 
     return (
         <AppContext.Provider value = {value}> 
