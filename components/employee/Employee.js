@@ -1,10 +1,30 @@
+import React from 'react'
+import { useRouter } from 'next/router'
 
-export default function Employee({employeeInfo}){
-    
+export default function Employee({employeeInfo, changeState}){
+
+    const router = useRouter()
+
+    const logout = () => {
+        changeState({type: "UNSUBSCRIBE_COMPANY"})
+        changeState({type: "LOGOUT_USER"})
+        changeState({type: "UNSUBSCRIBE_ITEMS"})
+        router.push("/")
+    }
+
+    console.log("Ecmployee container rendered ")
+
     return (
-        <div className="employeeInfo">
-            <p>Name: {employeeInfo.name}</p>
-            <p>Employee ID: {employeeInfo.employeeId}</p>
-        </div>
+        <React.Fragment>
+            <div style={{display: "flex", justifyContent: "flex-end"}}>
+                <button onClick={() => logout()}>Logout</button>
+            </div>
+            <div style={{marginRight: "1rem"}}>
+                <h4>Current Employee:</h4>
+                <p>Name: {employeeInfo.name}</p>
+                <p>Employee ID: {employeeInfo.employeeId}</p>
+            </div>      
+            
+        </React.Fragment>
     )
 }

@@ -4,7 +4,8 @@ export default function itemsReducer (state = [], action={}) {
 
     const command = {
         "SET_ITEMS": action.payload,
-        "ADD_ITEM": [ ...state, action.payload ] 
+        "ADD_ITEM": [ ...state, action.payload ],
+        "UNSUBSCRIBE_ITEMS": []
     }
     return command[action.type] || state
 }

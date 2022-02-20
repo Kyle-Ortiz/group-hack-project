@@ -74,7 +74,7 @@ console.log("Main page rendered")
 
 function Selection() {
 
-  const { globalState } = useContext(AppContext) 
+  const { globalState, changeState } = useContext(AppContext) 
   const employee = globalState.users.current_user;
   const company = globalState.companyProfile;
   const pureItems = globalState.items;
@@ -102,8 +102,7 @@ function Selection() {
                 </div>
 
                 <div className={styles.employeeContainer}>
-                    <h4>Current Employee:</h4>
-                    <Employee employeeInfo={employee}/>
+                    <Employee employeeInfo={employee} changeState={changeState} />
                 </div>
 
                 <ItemSearchCategoriesAndItemsProvider>
