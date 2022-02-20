@@ -8,18 +8,13 @@ function ItemSearch({pureItems, itemsForDatalist}) {
     const datalist_ref = useRef();
     const { setSearchedItem, setSelectedCategory, selectedCategory } = useContext(ItemSearchCategoriesAndItemsContext)
 
-    console.log(datalist_ref)
-
     const handleDatalistChange = () => {
         const search = pureItems.find(item => item.name === datalist_ref.current?.value)
-        console.log(datalist_ref)
         setSearchedItem(search)
         setSelectedCategory()
     }
 
     const clearSearch = () => {
-        console.log("hello")
-        console.log(datalist_ref)
         if(datalist_ref.current) datalist_ref.current.value = ""
         setSearchedItem()
     }
