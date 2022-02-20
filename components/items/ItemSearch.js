@@ -6,7 +6,7 @@ import { ItemSearchCategoriesAndItemsContext } from '../ItemSearchCategoriesAndI
 function ItemSearch({pureItems, itemsForDatalist}) {
 
     const datalist_ref = useRef();
-    const { setSearchedItem, setSelectedCategory } = useContext(ItemSearchCategoriesAndItemsContext)
+    const { setSearchedItem, setSelectedCategory, selectedCategory } = useContext(ItemSearchCategoriesAndItemsContext)
 
     console.log(datalist_ref)
 
@@ -23,6 +23,9 @@ function ItemSearch({pureItems, itemsForDatalist}) {
         if(datalist_ref.current) datalist_ref.current.value = ""
         setSearchedItem()
     }
+
+    if(selectedCategory) clearSearch()
+    
 
     return (
         <div className={styles.itemSearch}>
