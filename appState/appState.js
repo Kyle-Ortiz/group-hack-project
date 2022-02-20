@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react'
+import React, { createContext, useState, useEffect, useMemo } from 'react'
 import companies from './reducers/companies';
 import itemsReducer from './reducers/itemsReducer';
 import usersReducer from './reducers/usersReducer';
@@ -69,17 +69,16 @@ export const AppProvider = ({children}) => {
 
     useEffect(() => {
         setGlobalState(myStore.getState())
-
         return () => {
             myStore.subscribe(() => {
-                console.log("subscribe function called")
+                setGlobalState(myStore.getState())
             })
         };
-    }, []);
+    }, [globalState]);
 
-    // const globalState = myStore.getState();
+
     const changeState = myStore.changeState;
-    const value = {globalState, changeState}
+    const value = useMemo(() => ({globalState, changeState}), [globalState, changeState])
 
     return (
         <AppContext.Provider value = {value}> 
