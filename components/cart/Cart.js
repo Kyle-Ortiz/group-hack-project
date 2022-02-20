@@ -12,7 +12,7 @@ function Cart() {
     if(!basket.length) return (
         <React.Fragment>
             <br/>
-            <p>Your cart is empty. Select items to add them to your cart.</p>
+           <h4>Cart</h4> <p>Your cart is empty. Select items to add them to your cart.</p>
         </React.Fragment>
     )
     

@@ -1,3 +1,13 @@
+/* This styling needs to be changed */
+/* .itemSearch{
+    background-color: #fff;
+    grid-area: searchItem;
+    border: solid 2px #2e7d32;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1rem;
+} */
+
 .itemsOnScreen {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

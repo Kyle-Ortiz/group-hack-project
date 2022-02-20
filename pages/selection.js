@@ -1,6 +1,7 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import Cart from '../components/cart/Cart'
 import { CartProvider } from '../components/cart/CartContext'
+import { ItemSearchCategoriesAndItemsProvider } from '../components/ItemSearchCategoriesAndItemsContext'
 import { AppContext } from '../appState/appState'
 import Categories from '../components/Categories'
 import Company from '../components/company/Company'
@@ -8,6 +9,9 @@ import Employee from '../components/employee/Employee'
 import Items from '../components/items/Items'
 import NavBar from '../components/navbar/NavBar'
 import styles from '../styles/Selection.module.css'
+import ItemOnScreen from '../components/items/ItemOnScreen'
+import ItemSearch from '../components/items/ItemSearch'
+
 
 export const subscribedCompanies = [
     {
@@ -46,7 +50,6 @@ export const employees = [
     {name: "Pete Waters", employeeId: "12345", password: "posapp", isAdmin: false}
 ]
 
-
 export const itemsList = [
     {name: "Orange juice", price: 3.99, category: "Beverages", picture: "https://devblogimages.s3-us-east-2.amazonaws.com/vNviR5jZz3eZajtkKtGqbF.png"}, 
     {name: "Lamp", price: 42.99, category: "Home", picture: "https://camo.githubusercontent.com/1c94b38e955ab102dede85a82e317a3c8b94369c562d559d4663ab030fa5d983/687474703a2f2f7069676d656e742e6769746875622e696f2f66616b652d6c6f676f732f6c6f676f732f766563746f722f636f6c6f722f677265656e732d666f6f642d737570706c696572732e737667"}, 
@@ -66,19 +69,7 @@ export const itemsList = [
     {name: "Watermelon", category: "Fruits & Vegetables"}
 ]
 
-const employeeInfo = {
-    name: "John Doe",
-    employeeId: "12345"
-}
-
-const categoriesList = [
-    "Dairy", "Beverages", "Pasta", "Pastries", "Meats", "Electronics", 
-    "Cleaning", "Canned"
-]
-
-
 console.log("Main page rendered")
-
 
 
 function Selection() {
@@ -86,10 +77,21 @@ function Selection() {
   const { globalState } = useContext(AppContext) 
   const employee = globalState.users.current_user;
   const company = globalState.companyProfile;
+  const pureItems = globalState.items;
 
   console.log(globalState)  
   console.log("Main page rendered inside component")
 
+  let itemsForContainer = [];
+  let itemsForDatalist  = [];
+
+  pureItems.forEach((item, index) => {
+    console.log("Full items iteration called")
+    itemsForContainer.push(<ItemOnScreen item={item} key={index} />)
+    itemsForDatalist.push(<option value={item.name} key={index} dataid={index} />)
+  })
+
+  
   return (
       <div className={styles.container}>          
             <div className={styles.selectionContainer}>
@@ -104,30 +106,28 @@ function Selection() {
                     <Employee employeeInfo={employee}/>
                 </div>
 
-                <div className={styles.itemSearchAndcategoriesContainer}>
-                    <div className={styles.itemSearch}>
-                        <h4>Search Item</h4>
-                        <input type="text" ></input>
+                <ItemSearchCategoriesAndItemsProvider>
+                    <div className={styles.itemSearchAndcategoriesContainer}>
+                        <ItemSearch pureItems={pureItems} itemsForDatalist={itemsForDatalist} />
+                        <hr/>
+                        <Categories categories={company.categories}  />
                     </div>
-                    <hr/>
-                    <h4>Categories</h4>
-                    <Categories categories={company.categories} />
-                </div>
-
-                <CartProvider>
-                    <div className={styles.cartContainer}>
-                        <Cart />
-                    </div>
-                    <button className={styles.checkoutButton}>Proceed to Checkout</button>
-
-                    <div className={styles.itemsContainer}>
-                        <div>
-                            <h4>Items</h4>
-                        </div>
-                        <Items items={itemsList}/>
-                    </div>
-                </CartProvider>
                     
+                    <CartProvider>
+                        <div className={styles.cartContainer}>
+                            <Cart />
+                        </div>
+                        <button className={styles.checkoutButton}>Proceed to Checkout</button>
+                        
+                        <div className={styles.itemsContainer}>
+                            <div>
+                                <h4>Items</h4>
+                            </div>
+                            <Items pureItems={pureItems} itemsForContainer={itemsForContainer} />
+                        </div>
+                    </CartProvider>
+                </ItemSearchCategoriesAndItemsProvider>
+                
             </div>
       </div>
   )

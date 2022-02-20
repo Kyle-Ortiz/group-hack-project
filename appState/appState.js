@@ -45,6 +45,7 @@ const createMyStore = reducer => {
             if(typeof action.type === 'undefined') {
                 throw new Error('Actions may not have an undefined "type" property.');
             }
+            
             state = reducer(state, action)
             subscribers.forEach(handler => handler())
         },

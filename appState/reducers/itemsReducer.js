@@ -1,21 +1,11 @@
-const defaultState = {
-    items: []
-}
 
-export default function itemsReducer (state = defaultState, action={}) {
+export default function itemsReducer (state = [], action={}) {
     console.log("itemsState called")
 
     const command = {
-        "SET_ITEMS": {...state, items: action.payload },
-        "ADD_ITEM": {...state, items: [...state.items, action.payload] },
-        "DELETE_ITEM": function(){
-
-            return (
-                "hi"
-            )
-        }
+        "SET_ITEMS": action.payload,
+        "ADD_ITEM": [ ...state, action.payload ] 
     }
-    // debugger
     return command[action.type] || state
 }
 
