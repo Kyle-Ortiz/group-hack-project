@@ -41,7 +41,7 @@ function Signin() {
  
   return <form className="form" onSubmit={submit}>
                <div>
-                    <img src={selectedCompany.logo} width="250px" height="100px" />
+                    <img src={selectedCompany.logo} width="250px" height="100px" alt="company-logo" />
                </div>
                <div><p>Use this to login: employeeId: 12345, password: posapp</p></div>
                <div >
