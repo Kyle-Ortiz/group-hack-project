@@ -7,6 +7,7 @@ import { subscribedCompanies } from './selection';
 import { useRouter } from 'next/router';
 import { slugify } from '../utilities/slug';
 
+
 export default function Home() {
 
   const { globalState, changeState }  = useContext(AppContext);
@@ -16,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     changeState({type: "SUBSCRIBE_COMPANIES", payload: subscribedCompanies })
-  }, [subscribedCompanies]);
+  }, [changeState]);
 
   console.log(globalState)
   
@@ -48,7 +49,12 @@ export default function Home() {
           {companies.map( (company, key) => {
             return (
               <div className={styles.card} key={key} onClick={() => setCompany(company) }>
-                  <img  src={company.logo} />
+                  <img  
+                    src={company.logo} 
+                    alt="company-logo"
+                    width="250px"
+                    height="100px"
+                  />
                   <h2>{company.name}</h2>
                   <p>{company.description}</p>
               </div>

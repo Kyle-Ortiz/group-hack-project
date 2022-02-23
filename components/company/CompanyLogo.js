@@ -1,4 +1,5 @@
 import styles from "../../styles/navbar.module.css"
+import Image from 'next/image'
 
 function CompanyLogo({imageUrl}) {
     return (
@@ -11,8 +12,8 @@ function CompanyLogo({imageUrl}) {
         // none - The image is not resized
         // scale-down - the image is scaled down to the smallest version of none or contain
         <div className={styles.logo}>
-            <img 
-                src={imageUrl} 
+            <img
+                src={imageUrl || ""} 
                 alt="company-logo" 
                 width="60px"
                 height="60px"

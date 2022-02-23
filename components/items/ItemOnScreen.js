@@ -12,9 +12,10 @@ function ItemOnScreen({item}){
         <div className={styles.individualItemContainer} onClick={() => addCartItem(item)}>
             
             <img 
-                src={item.picture} 
+                src={item.picture || ""} 
                 width="110px"
                 height="75px" 
+                alt="individual item"
                 style={{
                     objectFit:"contain",
                     border: "solid 1px green",

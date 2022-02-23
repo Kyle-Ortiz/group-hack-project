@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjs-blog
+  labels:
+    app: nextjs-blog
+spec:
+  selector:
+    matchLabels:
+      app: nextjs-blog
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: nextjs-blog
+        tier: web
+    spec:
+      containers:
+      - name: nextjs-blog-app
+        image: gcr.io/nextjs-blog-292411/nextjs-blog:v1
+        ports:
+        - containerPort: 3000

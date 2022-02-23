@@ -55,3 +55,4 @@ spec:
           terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
       restartPolicy: Always
+      
