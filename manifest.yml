@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: nginx-webapp
-  name: nginx-webapp
+    app: pos-app
+  name: pos-app
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx-webapp
+      app: pos-app
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: nginx-webapp
+        app: pos-app
     spec:
       containers:
-      - image: gcr.io/staticweb-test/nginx-webapp:v1
-        name: webapp
+      - image: registry.hub.docker.com/70405381/pos-app:latest
+        name: pos-app
         imagePullPolicy: Always
         resources: {}
         ports:
@@ -31,13 +31,13 @@ status: {}
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-webapp
+  name: pos-app
   labels:
-    run: nginx-webapp
+    run: pos-app
 spec:
   ports:
   - port: 80
     protocol: TCP
   selector:
-    app: nginx-webapp
+    app: pos-app
   type: LoadBalancer
