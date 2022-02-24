@@ -11,6 +11,7 @@ import NavBar from '../components/navbar/NavBar'
 import styles from '../styles/Selection.module.css'
 import ItemOnScreen from '../components/items/ItemOnScreen'
 import ItemSearch from '../components/items/ItemSearch'
+import {useRouter} from 'next/router'
 
 
 export const subscribedCompanies = [
@@ -73,7 +74,7 @@ console.log("Main page rendered")
 
 
 function Selection() {
-
+  const router = useRouter();
   const { globalState, changeState } = useContext(AppContext) 
   const employee = globalState.users.current_user;
   const company = globalState.companyProfile;
@@ -90,6 +91,10 @@ function Selection() {
     itemsForContainer.push(<ItemOnScreen item={item} key={index} />)
     itemsForDatalist.push(<option value={item.name} key={index} dataid={index} />)
   })
+
+  function checkoutPush() {
+      router.push("/checkout");
+  }
 
   
   return (
@@ -116,7 +121,7 @@ function Selection() {
                         <div className={styles.cartContainer}>
                             <Cart />
                         </div>
-                        <button className={styles.checkoutButton}>Proceed to Checkout</button>
+                        <button onClick={()=> checkoutPush()} className={styles.checkoutButton}>Proceed to Checkout</button>
                         
                         <div className={styles.itemsContainer}>
                             <div>
