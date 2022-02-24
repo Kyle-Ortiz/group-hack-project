@@ -1,0 +1,70 @@
+.categoryList {
+    display: flex;
+    inline-size: max-content;
+}
+
+.categoryListWrapper { 
+    overflow-y: hidden;
+}
+
+.individualCategory {
+    /* padding: .4rem .8rem; */
+    background-color: bisque;
+    margin: .5rem .5rem 0rem .5rem;
+    border-radius: 10%;
+    border: 1px solid;
+        /* The position: relative is important because it prevents */
+        /* the child radio input element (with position of absolute) */
+        /* from overflowing the container */
+    position: relative;
+}
+
+.individualCategory input {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    border-radius: 10%;
+    opacity: 0;
+}
+
+.individualCategory label {
+    border-radius: 10%;
+    padding: .4rem .8rem;
+    display: flex;
+}
+
+.individualCategory input:checked + label  {
+    background: #d81b60;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Keep for applying gradient */
+/* .categoryButton {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgb(151 65 252 / 20%) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 19px 24px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+} */
