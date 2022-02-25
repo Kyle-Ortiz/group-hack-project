@@ -100,10 +100,12 @@ function Selection() {
                     <NavBar />     
                     <Company company={company} />
                 </div>
-
-                <div className={styles.employeeContainer}>
-                    <Employee employeeInfo={employee} changeState={changeState} />
-                </div>
+                
+                <CartProvider>
+                    <div className={styles.employeeContainer}>
+                        <Employee employeeInfo={employee} changeState={changeState} />
+                    </div>
+                </CartProvider>
 
                 <ItemSearchCategoriesAndItemsProvider>
                     <div className={styles.itemSearchAndcategoriesContainer}>

@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useRouter } from 'next/router'
+import { CartContext } from '../cart/CartContext';
 
 export default function Employee({employeeInfo, changeState}){
 
-    const router = useRouter()
+    const router = useRouter();
+    const { clearCart } = useContext(CartContext);
 
     const logout = () => {
         changeState({type: "UNSUBSCRIBE_COMPANY"})
         changeState({type: "LOGOUT_USER"})
         changeState({type: "UNSUBSCRIBE_ITEMS"})
         router.push("/")
+        clearCart()
     }
 
     console.log("Ecmployee container rendered ")
