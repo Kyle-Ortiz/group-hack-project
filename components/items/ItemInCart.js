@@ -9,13 +9,17 @@ function ItemInCart({item}) {
     return (
         <div className={styles.itemInCart}>
             <p>{item.name} x {item.quantity} @ <strong>${item.price}</strong></p>
+            {/* <div style={{ display: "flex", justifyContent: "space-between"}}>
+                <span>{item.name} x {item.quantity}  </span>
+                <strong>@ ${item.price}</strong>
+            </div> */}
             <button className={styles.cartButtonCancel} onClick={() => eliminateCartItem(item)}>
                 X
             </button>  
-            <button className={styles.cartButton} onClick={() => subtractCartItem(item)}> 
-                -
+            <button className={styles.subtractButton} onClick={() => subtractCartItem(item)}> 
+                --
             </button>
-            <button className={styles.cartButton} onClick={() => addCartItem(item)}>
+            <button className={styles.addButton} onClick={() => addCartItem(item)}>
                 +
             </button>
         </div>

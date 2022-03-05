@@ -10,6 +10,11 @@
 .individualCategory {
     /* padding: .4rem .8rem; */
     background-color: bisque;
+    /* background-color:tan; */
+    /* background-color: rgb(147, 186, 187); */
+    /* background-color: rgb(151 65 252 / 20%) 0 15px 30px -5px; */
+    /* background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB); */
+    box-shadow: rgb(151 65 252 / 20%) 0 15px 30px -5px;
     margin: .5rem .5rem 0rem .5rem;
     border-radius: 10%;
     border: 1px solid;

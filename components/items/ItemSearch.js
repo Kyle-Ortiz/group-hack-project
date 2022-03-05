@@ -25,21 +25,17 @@ function ItemSearch({pureItems, itemsForDatalist}) {
     return (
         <div className={styles.itemSearch}>
             <div style={{ display: 'flex', justifyContent: "space-between"}}>
-                <h4>Search Item</h4>
-                <button onClick={() => clearSearch()}>
+                <span>
+                    <strong>Search Item: </strong>
+                    <input type="text" list="item-search" ref={datalist_ref} onChange={handleDatalistChange} />
+                    <datalist id="item-search">
+                        {itemsForDatalist}
+                    </datalist>
+                </span>
+                <button onClick={() => clearSearch()} className='clearanceButton' >
                     Clear search
                 </button>
             </div>
-            
-            <input 
-                type="text" 
-                list="item-search" 
-                ref={datalist_ref} 
-                onChange={handleDatalistChange}
-            />
-            <datalist id="item-search">
-                {itemsForDatalist}
-            </datalist>
         </div>
     )
 }

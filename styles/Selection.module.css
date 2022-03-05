@@ -10,50 +10,49 @@
                          "searchItemAndCategories cart"
                          "items cart"
                          "items checkoutButton";
-    grid-template-columns: 70%;
+    grid-template-columns: 75%;
     grid-gap: 1rem;
 }
 
 .companyContainer{
     background-color: #fff;
     grid-area: company;
-    border: solid 2px #2e7d32;
+    border: var(--defaultBranding);
     /* padding: 1.5rem;   commented out by Luis to merge navbar into company container */   
     margin: 1rem 0 0 0;
     border-radius: .5rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.company {
-    padding: 1rem;
+    box-shadow: var(--defaultShadow);
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 
 .employeeContainer{
     background-color: #fff;
     grid-area: employee;
-    border: solid 2px #2e7d32;
+    /* border: solid 2px #b9ad01; */
+    border: var(--defaultBranding);
     border-radius: .5rem;
     margin: 1rem 0 0 0;
     padding: 0rem 0rem 1rem 1rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: var(--defaultShadow);
 }
 
 .itemSearchAndcategoriesContainer{
     background-color: #fff;
     grid-area: searchItemAndCategories;
-    border: solid 2px #2e7d32;
+    border: var(--defaultBranding);
     border-radius: .5rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: var(--defaultShadow);
     padding: 1rem;
 }
 
 .cartContainer{
     background-color: #fff;
     grid-area: cart;
-    border: solid 2px #2e7d32;
+    /* border: solid 2px #2e7d32; */
+    border: var(--defaultBranding);
     border-radius: .5rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    overflow-x: hidden;
+    box-shadow: var(--defaultShadow);
+    /* overflow-x: hidden; */
     height: 450px;
     text-align: center;
 }
@@ -81,9 +80,9 @@
 .itemsContainer{
     background-color: #fff;
     grid-area: items;
-    border: solid 2px #2e7d32;
+    border: var(--defaultBranding);
     border-radius: .5rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: var(--defaultShadow);
     padding: 1rem;;
     margin-bottom: .5rem;
 }

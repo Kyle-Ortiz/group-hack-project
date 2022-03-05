@@ -5,7 +5,7 @@ const defaultState = {
     categories: [],
     branding: {
         background: "",
-        borders: ""
+        border: ""
     },    
     transactions: []
 }

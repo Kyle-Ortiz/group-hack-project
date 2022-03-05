@@ -7,7 +7,7 @@ function Cart() {
 
     console.log("Cart component rendered")
 
-    const { basket, clearCart } = useContext(CartContext);
+    const { basket, clearCart, total } = useContext(CartContext);
     
     if(!basket.length) return (
         <React.Fragment>
@@ -18,10 +18,23 @@ function Cart() {
     
     return (
         <React.Fragment>
-            <div style={{display: "flex", flexDirection: "column", alignItems: "flex-end"}}>
-                <button onClick={() => clearCart()}>Clear cart</button>
-                <h4 style={{alignSelf: "center"}}> Cart</h4>
+            <div 
+                style={{
+                    display: "flex", 
+                    flexDirection: "row", 
+                    justifyContent:"space-between", 
+                    alignItems:"flex-end",
+                    margin:"0rem 0rem 0.5rem 0.5rem",
+                }}
+            >
+               <span>
+                   Total: <strong>${total}</strong> 
+               </span> 
+               <button onClick={() => clearCart()} className='clearanceButton'>
+                   Clear cart
+                </button>
             </div>
+            <h4 style={{alignSelf: "center"}}> Cart</h4>
             <div className={styles.cartList}>
                 {basket.map((item, index) => {
                     return <ItemInCart item={item} key={index} />

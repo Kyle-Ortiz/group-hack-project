@@ -34,3 +34,8 @@
     overflow-wrap: break-word;
     hyphens: manual;
 }
+
+.clearanceButton:hover {
+    background-color: var(--clearanceButtonBackground);
+    color: white;
+}

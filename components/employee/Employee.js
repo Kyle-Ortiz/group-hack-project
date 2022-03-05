@@ -20,7 +20,9 @@ export default function Employee({employeeInfo, changeState}){
     return (
         <React.Fragment>
             <div style={{display: "flex", justifyContent: "flex-end"}}>
-                <button onClick={() => logout()}>Logout</button>
+                <button onClick={() => logout()} className='clearanceButton'>
+                    Logout
+                </button>
             </div>
             <div style={{marginRight: "1rem"}}>
                 <h4>Current Employee:</h4>

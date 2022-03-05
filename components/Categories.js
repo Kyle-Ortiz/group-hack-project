@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import styles from '../styles/categories.module.css'
 import { ItemSearchCategoriesAndItemsContext } from './ItemSearchCategoriesAndItemsContext'
 
-export default function Categories({categories}) {
+export default function Categories({ categories, branding }) {
 
     const { selectedCategory, setSelectedCategory } = useContext(ItemSearchCategoriesAndItemsContext)
     console.log("Categories container rendered")
@@ -13,7 +13,7 @@ export default function Categories({categories}) {
         <React.Fragment>
             <div style={{ display: "flex", justifyContent: "space-between"}} >
                 <h4>Categories</h4>
-                <button onClick={() => setSelectedCategory()}>
+                <button onClick={() => setSelectedCategory()} className='clearanceButton'>
                     Clear category
                 </button>
             </div>
@@ -24,7 +24,8 @@ export default function Categories({categories}) {
                         return ( 
                             <div 
                                 key={index} 
-                                className={styles.individualCategory} 
+                                className={styles.individualCategory}
+                                // style= {{backgroundColor: branding.color }} 
                                 onClick={() => setSelectedCategory(category)}
                             >
                                 <input type='radio' name="category" />

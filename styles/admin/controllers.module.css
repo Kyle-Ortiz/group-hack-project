@@ -1,0 +1,9 @@
+.controllersContainer button {
+    margin: 0.2rem;
+    cursor: pointer;
+}
+
+.controllersContainer button:hover {
+    color: white;
+    background-color:darkslategray
+}
