@@ -12,9 +12,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.2rem 0rem;
-    /* max-height: 250px; */
-    height: 280px;
-    overflow-x: hidden;
+    height: 350px;
+    overflow-x:hidden;
+    /* border: 1px solid; */
+    /* overflow-x: hidden; */
 }
 
 .individualItemContainer {

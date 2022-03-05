@@ -120,9 +120,9 @@ function Selection() {
                         <button className={styles.checkoutButton}>Proceed to Checkout</button>
                         
                         <div className={styles.itemsContainer} style={{ border: branding.border }} >
-                            <div>
+                            {/* <div>
                                 <h4>Items</h4>
-                            </div>
+                            </div> */}
                             <Items pureItems={pureItems} itemsForContainer={itemsForContainer} />
                         </div>
                     </CartProvider>
