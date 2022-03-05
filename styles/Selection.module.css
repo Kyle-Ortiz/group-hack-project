@@ -32,7 +32,7 @@
     border: var(--defaultBranding);
     border-radius: .5rem;
     margin: 1rem 0 0 0;
-    padding: 0rem 0rem 1rem 1rem;
+    padding: 0rem 0rem .5rem 1rem;
     box-shadow: var(--defaultShadow);
 }
 
@@ -53,7 +53,8 @@
     border-radius: .5rem;
     box-shadow: var(--defaultShadow);
     /* overflow-x: hidden; */
-    height: 450px;
+    /* height: 450px; */
+    height: 475px;
     text-align: center;
 }
 

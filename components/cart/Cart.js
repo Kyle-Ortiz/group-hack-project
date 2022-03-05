@@ -24,7 +24,7 @@ function Cart() {
                     flexDirection: "row", 
                     justifyContent:"space-between", 
                     alignItems:"flex-end",
-                    margin:"0rem 0rem 0.5rem 0.5rem",
+                    margin:"0rem 0rem 0.5rem 0.5rem",    
                 }}
             >
                <span>

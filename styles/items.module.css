@@ -12,10 +12,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.2rem 0rem;
-    height: 350px;
+    height: 375px;
     overflow-x:hidden;
-    /* border: 1px solid; */
-    /* overflow-x: hidden; */
 }
 
 .individualItemContainer {
@@ -30,10 +28,11 @@
 .individualItem {
     border: solid 1px blue;
     border-radius: 0 0 1rem 1rem;
-    padding: .5rem;
+    padding: 0rem .2rem .2rem .2rem;
     text-align: center;
     overflow-wrap: break-word;
     hyphens: manual;
+    /* font-size: 14px; */
 }
 
 .clearanceButton:hover {

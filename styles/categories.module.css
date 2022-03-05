@@ -39,8 +39,9 @@
 
 .individualCategory label {
     border-radius: 10%;
-    padding: .4rem .8rem;
+    padding: .3rem .5rem;
     display: flex;
+    font-size: 14px;
 }
 
 .individualCategory input:checked + label  {
