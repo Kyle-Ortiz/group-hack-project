@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useRouter } from 'next/router'
+import { CartContext } from '../cart/CartContext';
 
 export default function Employee({employeeInfo, changeState}){
 
-    const router = useRouter()
+    const router = useRouter();
+    const { clearCart } = useContext(CartContext);
 
     const logout = () => {
         changeState({type: "UNSUBSCRIBE_COMPANY"})
         changeState({type: "LOGOUT_USER"})
         changeState({type: "UNSUBSCRIBE_ITEMS"})
         router.push("/")
+        clearCart()
     }
 
     console.log("Ecmployee container rendered ")
@@ -17,7 +20,9 @@ export default function Employee({employeeInfo, changeState}){
     return (
         <React.Fragment>
             <div style={{display: "flex", justifyContent: "flex-end"}}>
-                <button onClick={() => logout()}>Logout</button>
+                <button onClick={() => logout()} className='clearanceButton'>
+                    Logout
+                </button>
             </div>
             <div style={{marginRight: "1rem"}}>
                 <h4>Current Employee:</h4>

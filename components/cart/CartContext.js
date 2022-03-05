@@ -4,6 +4,8 @@ export const CartContext =  createContext();
 
 const itemsList = new Map();
 
+let total = 0;
+
 export const CartProvider = ( {children }) => {
 
     const [basket, setBasket] = useState([]);
@@ -19,6 +21,7 @@ export const CartProvider = ( {children }) => {
             updatedItem.quantity++
             itemsList.set(name, updatedItem)
         }
+        total = (Number(total) + item.price).toFixed(2)
         // convert the values of the itemsList map into an array
         setBasket([...itemsList.values()])
     }
@@ -35,16 +38,19 @@ export const CartProvider = ( {children }) => {
             updatedItem.quantity--
             itemsList.set(name, updatedItem)
         }
+        total = (Number(total) - item.price).toFixed(2)
         setBasket([...itemsList.values()])
     }
        
     function eliminateCartItem(item){
         itemsList.delete(item.name)
+        total = (Number(total) - item.quantity*item.price).toFixed(2)
         setBasket([...itemsList.values()])
     }
 
     function clearCart() {
         itemsList.clear();
+        total = 0
         setBasket([])
     }
 
@@ -56,6 +62,7 @@ export const CartProvider = ( {children }) => {
                 eliminateCartItem,
                 clearCart,
                 basket,
+                total
             }} 
         >
             {children}

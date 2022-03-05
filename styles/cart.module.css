@@ -1,45 +1,108 @@
-.itemInCart {
+/* Previous style: commented out by Luis  */
+/* .itemInCart {
     text-align: left;
     padding: 5px;
     background: azure;
     border-radius: 5px;
     margin: 10px;
     border: solid 2px #2e7d32;
-    /* margin-bottom: 15px; */
     box-shadow: #8080808c 2px 4px 10px 2px;
+} */
+/* Previous style: commented out by Luis  */
+
+.cartList {
+    overflow-x: hidden; 
+    height: 395px;
 }
 
-button.cartButton {
+/* Recent styles: added by Luis */
+.itemInCart {
+    text-align: left;
+    /* padding: 5px; */
+    /* background: azure; */
+    /* border-radius: 5px; */
+    margin: 1rem;
+    /* border: solid 2px #2e7d32; */
+    /* margin-bottom: 15px; */
+    /* box-shadow: #8080808c 2px 4px 10px 2px; */
+}
+/* Recent styles: added by Luis */
+
+
+/* Previous style: commented out by Luis  */
+
+/* button.cartButton {
     width: 30%;
     padding: 2px;
     margin: 3px;
     background: #fff;
     border: solid 2px #2e7d32;
     border-radius: 5px;
-}
+} */
 
-button.cartButton:hover {
+/* button.cartButton:hover {
     color: #fff;
     background: #2e7d32;
     border-color: #fff;
     box-shadow: #8080808c 2px 4px 10px 2px;
-}
+} */
 
-button.cartButtonCancel {
+/* button.cartButtonCancel {
     width: 30%;
     padding: 2px;
     margin: 3px;
     background: #fff;
     border: solid 2px red;
     border-radius: 5px;
-}
+} */
 
-button.cartButtonCancel:hover {
+/* button.cartButtonCancel:hover {
     color: black;
     background: red;
     border-color: black;
     box-shadow: #8080808c 2px 4px 10px 2px;
+} */
+/* Previous style: commented out by Luis  */
+
+
+/* Recent styles: added by Luis */
+.addButton, .subtractButton {
+    width: 20%;
+    padding: 2px;
+    margin: 3px;
+    background: #fff;
+    border: solid 2px gray;
+    border-radius: 5px;
 }
+
+.addButton:hover {
+    color: #fff;
+    background:rgba(0, 174, 255, 0.973);;
+    box-shadow: #8080808c 2px 4px 10px 2px;
+}
+
+.subtractButton:hover {
+    color: #fff;
+    background:rgb(255, 174, 0);
+    box-shadow: #8080808c 2px 4px 10px 2px;
+}
+
+.cartButtonCancel{
+    width: 20%;
+    padding: 2px;
+    margin: 3px;
+    background: #fff;
+    border: solid 2px gray;
+    border-radius: 5px;
+}
+
+.cartButtonCancel:hover {
+    color: white;
+    background:cadetblue;
+    border-color: black;
+    box-shadow: #8080808c 2px 4px 10px 2px;
+}
+/* Recent styles: added by Luis */
 
 .stickyTop {
     position:sticky;
@@ -48,9 +111,3 @@ button.cartButtonCancel:hover {
     /* padding-top: 15px; */
 }
 
-.cartList {
-        /* overflow-x: hidden; */
-    /* height: 450px; */
-    overflow-x: hidden; 
-    
-}

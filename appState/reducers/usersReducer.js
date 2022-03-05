@@ -1,8 +1,9 @@
 const defaultState = {
     users: [],
     current_user: {
-        // name: "",
-        // employeeId: ""
+        name: "",
+        employeeId: "",
+        isAdmin: false,
     }
 }
 

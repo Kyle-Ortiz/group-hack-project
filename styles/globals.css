@@ -24,5 +24,13 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
   --navbarHeight: 45px;
   --itemOnScreenWidth: 7rem;
+  --defaultBranding: solid 2px #4c524d;
+  --defaultShadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --clearanceButtonBackground: cadetblue
+}
+
+.clearanceButton:hover {
+  background-color: var(--clearanceButtonBackground);
+  color: white;
 }
   
