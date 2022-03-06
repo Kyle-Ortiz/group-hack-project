@@ -8,7 +8,7 @@ let total = 0;
 
 export const CartProvider = ( {children }) => {
 
-    const [basket, setBasket] = useState([]);
+    const [basket, setBasket] = useState([...itemsList.values()]);
     
     function addCartItem(item){
         const { name } = item

@@ -1,16 +1,17 @@
 import React, { useContext } from 'react'
-import Cart from '../components/cart/Cart'
 import { CartProvider } from '../components/cart/CartContext'
 import { ItemSearchCategoriesAndItemsProvider } from '../components/ItemSearchCategoriesAndItemsContext'
 import { AppContext } from '../appState/appState'
-import Categories from '../components/Categories'
+import NavBar from '../components/navbar/NavBar'
 import Company from '../components/company/Company'
 import Employee from '../components/employee/Employee'
+import ItemSearch from '../components/items/ItemSearch'
+import Categories from '../components/Categories'
 import Items from '../components/items/Items'
-import NavBar from '../components/navbar/NavBar'
+import Cart from '../components/cart/Cart'
 import styles from '../styles/Selection.module.css'
 import ItemOnScreen from '../components/items/ItemOnScreen'
-import ItemSearch from '../components/items/ItemSearch'
+import { useRouter } from 'next/router'
 
 
 export const subscribedCompanies = [
@@ -72,6 +73,7 @@ console.log("Main page rendered")
 
 function Selection() {
 
+  const router = useRouter()
   const { globalState, changeState } = useContext(AppContext) 
   const employee = globalState.users.current_user;
   const company = globalState.companyProfile;
@@ -117,7 +119,9 @@ function Selection() {
                         <div className={styles.cartContainer} style={{ border: branding.border }} >
                             <Cart />
                         </div>
-                        <button className={styles.checkoutButton}>Proceed to Checkout</button>
+                        <button className={styles.checkoutButton} onClick={() => router.push('/checkout')}>
+                            Proceed to Checkout
+                        </button>
                         
                         <div className={styles.itemsContainer} style={{ border: branding.border }} >
                             {/* <div>

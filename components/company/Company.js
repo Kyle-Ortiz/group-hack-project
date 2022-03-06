@@ -7,11 +7,7 @@ export default function Company ({company, employee}) {
             <div>
                 <h2>{company.name}</h2>
             </div>
-                {employee.isAdmin ? (
-                    <Controllers />
-                ): (
-                    null
-                )} 
+            {employee.isAdmin ?  <Controllers /> : null } 
         </div>
     )
 }
