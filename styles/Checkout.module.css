@@ -1,9 +1,3 @@
-.container {
-    padding: 0 2rem;
-    background-color: azure;
-    height: 100vh;
-}
-
 .checkoutContainer {
    display: grid;
    grid-template-areas: "company employee"
@@ -21,17 +15,15 @@
     /* background-color: #fff; */
     grid-area: payment;
     display: grid;
-    justify-content: center;
-    border: var(--defaultBranding); 
+    /* border: var(--defaultBranding);  */
     border-radius: .5rem;
-    gap: 2rem;
-    /* box-shadow: var(--defaultShadow); */
 }
 
 .paymentContainer span {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    text-align: center;
+    height: 50px;
 }
+
+
 

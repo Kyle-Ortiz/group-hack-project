@@ -3,9 +3,8 @@ import { CartContext } from "../cart/CartContext";
 import { useRouter } from "next/router"
 
 export default function Payment() {
-    const { basket } = useContext(CartContext)
+    const { basket, total } = useContext(CartContext)
     console.log("Payment container rendered")
-    const router = useRouter()
     const [showPayButton, setShowPayButton ] = useState('hidden')
     const [showError, setShowError ] = useState('hidden')
     
@@ -17,22 +16,25 @@ export default function Payment() {
 
     return (
         <React.Fragment>
-            <span>
-            <h4>Payment Method:</h4><br/>    
-                <button disabled={basket.length ? false : true} onClick={() => setShowPayButton('')} >
-                    Credit/Debit
-                </button>
-                <button disabled={basket.length ? false : true} onClick={() => setShowPayButton('')} >
-                    Cash
-                </button>
+            <span style={{marginTop: '2rem'}}>
+                <h4>Payment Method:</h4><br/>    
+                <span style={{display: 'grid', gridTemplateColumns: '50% 50%'}} >
+                    <button disabled={basket.length ? false : true} onClick={() => setShowPayButton('')} >
+                        Credit/Debit
+                    </button>
+                    <button disabled={basket.length ? false : true} onClick={() => setShowPayButton('')} >
+                        Cash
+                    </button>
+                </span>
             </span>
-            <span>
-                <button onClick={() => pay()} style={{visibility: showPayButton }}>
+            <span style={{visibility: showPayButton, marginTop: '2rem'}}>
+                <strong>Total: ${total}</strong>
+                <button onClick={() => pay()} style={{height: '40px'}}>
                     Pay
                 </button>
             </span>
-            <span>
-                <p style={{visibility: showError }}>
+            <span style={{visibility: showError }}>
+                <p>
                     ...Processing or Error
                 </p>
             </span>
