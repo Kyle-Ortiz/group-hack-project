@@ -1,0 +1,16 @@
+.paymentMethod {
+    /* display: grid; */
+    grid-template-columns: 50% 50%;
+    gap: 0rem 0rem;
+    justify-items: center;
+}
+.paymentMethod button {
+    width: 80%;
+}
+.payElement {
+    justify-items:center;
+}
+.payElement button{
+    width: 90%;
+    height: 50px;
+}

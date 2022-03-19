@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { AppContext } from '../appState/appState';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/pages/Landing.module.css'
 import { subscribedCompanies } from './selection';
 import { useRouter } from 'next/router';
 import { slugify } from '../utilities/slug';

@@ -9,7 +9,7 @@ import ItemSearch from '../components/items/ItemSearch'
 import Categories from '../components/Categories'
 import Items from '../components/items/Items'
 import Cart from '../components/cart/Cart'
-import styles from '../styles/Selection.module.css'
+import styles from '../styles/pages/Selection.module.css'
 import ItemOnScreen from '../components/items/ItemOnScreen'
 import { useRouter } from 'next/router'
 

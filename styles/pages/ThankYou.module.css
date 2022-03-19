@@ -1,0 +1,15 @@
+.base {
+    display: grid;
+    grid-template-rows: 30% 40% 30%;
+}
+.thankYouContainer {
+    margin: auto;
+    border: solid 8px rebeccapurple;
+    width: 55%;
+    height: 400px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+}

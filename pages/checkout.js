@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useRouter } from 'next/router';
-import selectionStyles from '../styles/Selection.module.css'
-import styles from '../styles/Checkout.module.css'
+import selectionStyles from '../styles/pages/Selection.module.css'
+import styles from '../styles/pages/Checkout.module.css'
 import { AppContext } from '../appState/appState';
 import { CartProvider } from '../components/cart/CartContext';
 import Company from '../components/company/Company';

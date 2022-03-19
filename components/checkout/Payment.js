@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import styles from "../../styles/payment.module.css"
 import { CartContext } from "../cart/CartContext";
 import { useRouter } from "next/router"
 
@@ -22,7 +23,7 @@ export default function Payment() {
         <React.Fragment>
             <span style={{marginTop: '2rem'}}>
                 <h4>Payment Method:</h4><br/>    
-                <span style={{display: 'grid', gridTemplateColumns: '50% 50%'}} >
+                <span className={styles.paymentMethod} >
                     <button disabled={basket.length ? false : true} onClick={() => setShowPayButton('')} >
                         Credit/Debit
                     </button>
@@ -31,9 +32,9 @@ export default function Payment() {
                     </button>
                 </span>
             </span>
-            <span style={{visibility: showPayButton, marginTop: '2rem'}}>
+            <span style={{visibility: showPayButton, marginTop: '2rem'}} className={styles.payElement}>
                 <strong>Total: ${total}</strong>
-                <button onClick={() => pay()} disabled={basket.length ? false : true} style={{height: '40px'}}>
+                <button onClick={() => pay()} disabled={basket.length ? false : true} >
                     Pay
                 </button>
             </span>
