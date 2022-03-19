@@ -3,17 +3,21 @@ import { CartContext } from "../cart/CartContext";
 import { useRouter } from "next/router"
 
 export default function Payment() {
+    const router = useRouter()
     const { basket, total } = useContext(CartContext)
-    console.log("Payment container rendered")
     const [showPayButton, setShowPayButton ] = useState('hidden')
     const [showError, setShowError ] = useState('hidden')
     
     function pay() {
         setShowError('')
+        setTimeout(()=> {
+            router.push("/thankYou")
+        }, 3000)
     }
-
-    if(!basket.length) () => setShowPayButton('hidden')
-
+    
+    if(!basket.length) ()=>setShowPayButton("hidden")
+    console.log("Payment component rendered")
+  
     return (
         <React.Fragment>
             <span style={{marginTop: '2rem'}}>
@@ -29,13 +33,13 @@ export default function Payment() {
             </span>
             <span style={{visibility: showPayButton, marginTop: '2rem'}}>
                 <strong>Total: ${total}</strong>
-                <button onClick={() => pay()} style={{height: '40px'}}>
+                <button onClick={() => pay()} disabled={basket.length ? false : true} style={{height: '40px'}}>
                     Pay
                 </button>
             </span>
             <span style={{visibility: showError }}>
                 <p>
-                    ...Processing or Error
+                    ...Processing transaction
                 </p>
             </span>
         </React.Fragment>
