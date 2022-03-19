@@ -2,26 +2,16 @@ import styles from '../../../styles/admin/controllers.module.css'
 
 export default function Controllers() {
     const buttons = [
-        <button onClick={{}}>Items</button>,
-        <button onClick={{}}>Categories</button>,
-        <button onClick={{}}>Employees</button>,
-        <button onClick={{}}>Analytics</button>,
-        // <button onClick={{}}>Items</button>,
-        // <button onClick={{}}>Employees</button>,
-        // <button onClick={{}}>Analytics</button>,
-        // <button onClick={{}}>Items</button>,
-        // <button onClick={{}}>Employees</button>,
-        // <button onClick={{}}>Analytics</button>,
-    //     <button onClick={{}}>Items</button>,
-    //     <button onClick={{}}>Employees</button>,
-    //     <button onClick={{}}>Employees</button>,
-    //     <button onClick={{}}>Analytics</button>,
-    //     <button onClick={{}}>Analytics</button>,
-    //     <button onClick={{}}>Analytics</button>,
-    ]
+        {name: "Items", operand: {}},
+        {name: "Categories", operand: {}},
+        {name: "Employee", operand: {}},
+        {name: "Analytics", operand: {}}
+    ]    
     return (
         <div className={styles.controllersContainer}>
-            {buttons.map(button => button)}
+            {buttons.map((object, key) => {
+                 return <button onClick={object.operand} key={key}>{object.name}</button>
+            })}
         </div>
     )
 }
