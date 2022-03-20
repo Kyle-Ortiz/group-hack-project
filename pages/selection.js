@@ -124,9 +124,6 @@ function Selection() {
                         </button>
                         
                         <div className={styles.itemsContainer} style={{ border: branding.border }} >
-                            {/* <div>
-                                <h4>Items</h4>
-                            </div> */}
                             <Items pureItems={pureItems} itemsForContainer={itemsForContainer} />
                         </div>
                     </CartProvider>

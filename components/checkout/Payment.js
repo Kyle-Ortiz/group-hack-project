@@ -24,7 +24,7 @@ export default function Payment() {
             <span style={{marginTop: '2rem'}}>
                 <h4>Payment Method:</h4><br/>    
                 <span className={styles.paymentMethod} >
-                    <button disabled={basket.length ? false : true} onClick={() => setShowPayButton('')} >
+                    <button id="payment-method-0" disabled={basket.length ? false : true} onClick={() => setShowPayButton('')} checked={true} >
                         Credit/Debit
                     </button>
                     <button disabled={basket.length ? false : true} onClick={() => setShowPayButton('')} >

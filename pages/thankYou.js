@@ -7,9 +7,9 @@ const ThankYou= () => {
     const router = useRouter();
     
     useEffect(() => {
-        // setTimeout(()=> {
-        //     router.push("/selection")
-        // }, 3000)
+        setTimeout(()=> {
+            router.push("/selection")
+        }, 3000)
         return () => {
             console.log("Pending timeout cleanup")
         };
