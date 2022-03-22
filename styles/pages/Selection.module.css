@@ -78,6 +78,15 @@
     color: black;
 }
 
+.checkoutButton[disabled]{
+    border: 2px outset;
+    color: gray;
+    cursor: inherit;
+    pointer-events: none;
+    background-color: #ddd;
+    background: #ddd;
+}
+
 .itemsContainer{
     background-color: #fff;
     grid-area: items;

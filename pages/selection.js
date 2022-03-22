@@ -116,12 +116,12 @@ function Selection() {
                     </div>
                     
                     <CartProvider>
-                        <div className={styles.cartContainer} style={{ border: branding.border }} >
-                            <Cart />
-                        </div>
-                        <button className={styles.checkoutButton} onClick={() => router.push('/checkout')}>
+                        {/* <div className={styles.cartContainer} style={{ border: branding.border }} > */}
+                            <Cart view="selectionPage" branding= {branding} />
+                        {/* </div> */}
+                        {/* <button className={styles.checkoutButton} onClick={() => router.push('/checkout')}>
                             Proceed to Checkout
-                        </button>
+                        </button> */}
                         
                         <div className={styles.itemsContainer} style={{ border: branding.border }} >
                             <Items pureItems={pureItems} itemsForContainer={itemsForContainer} />

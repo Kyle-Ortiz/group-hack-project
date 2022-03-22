@@ -35,7 +35,7 @@ function Checkout() {
                         <Payment />
                     </div>
                 
-                    <div className={selectionStyles.cartContainer}>
+                    <div style={{gridArea: "cartBox"}}>
                         <Cart />
                     </div>
                 </CartProvider>

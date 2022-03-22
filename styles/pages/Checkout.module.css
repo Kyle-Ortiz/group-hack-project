@@ -2,7 +2,8 @@
    display: grid;
    grid-template-areas: "company employee"
                         "goback goback"
-                        "payment cart";
+                        /* "payment cart"; */
+                        "payment cartBox";   
    grid-template-columns: 65%;
    grid-gap: 1rem;
 }
