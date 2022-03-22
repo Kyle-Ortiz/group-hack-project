@@ -1,11 +1,17 @@
 .paymentMethod {
+    display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
 }
-.paymentMethod button {
+/* .paymentMethod button {
+    width: 90%;
+} */
+.paymentMethod *{
     width: 90%;
 }
-
+.payment-method-button {
+    border: solid #4F46E5 1px;
+}
 .payElement {
     justify-items:center;
     margin: 0rem 4rem;
